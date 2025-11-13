@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyBongDa" Class="DataClassesQuanLyDoiBongDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\ProjectModels;Initial Catalog=QuanLyBongDa;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="FakeMadrid.Properties.Settings" SettingsPropertyName="QuanLyBongDaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Coach" Member="Coaches">
+    <Type Name="Coach">
+      <Column Name="coach_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="coach_name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="coach_birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="nationality" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="role" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hire_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="contract_end_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="salary" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Coach_Contract" Member="Contracts" ThisKey="coach_id" OtherKey="coach_id" Type="Contract" />
+      <Association Name="Coach_TrainingSession" Member="TrainingSessions" ThisKey="coach_id" OtherKey="coach_id" Type="TrainingSession" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Competition" Member="Competitions">
+    <Type Name="Competition">
+      <Column Name="competition_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="competition_name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="competition_type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="season" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Competition_Match" Member="Matches" ThisKey="competition_id" OtherKey="competition_id" Type="Match" />
+      <Association Name="Competition_Trophy" Member="Trophies" ThisKey="competition_id" OtherKey="competition_id" Type="Trophy" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contract" Member="Contracts">
+    <Type Name="Contract">
+      <Column Name="contract_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="player_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="coach_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="contract_type" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="start_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="end_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="salary" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="bonus_clause" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="release_clause" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Coach_Contract" Member="Coach" ThisKey="coach_id" OtherKey="coach_id" Type="Coach" IsForeignKey="true" />
+      <Association Name="Player_Contract" Member="Player" ThisKey="player_id" OtherKey="player_id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Injury" Member="Injuries">
+    <Type Name="Injury">
+      <Column Name="injury_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="player_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="injury_type" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="injury_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="expected_return_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="actual_return_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="severity" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Player_Injury" Member="Player" ThisKey="player_id" OtherKey="player_id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Match" Member="Matches">
+    <Type Name="Match">
+      <Column Name="match_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="home_team_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="away_team_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="competition_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="match_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="stadium" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="match_week" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="match_status" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="home_score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="away_score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="referee" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="attendance" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="is_home_match" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Match_PlayerMatchStatistic" Member="PlayerMatchStatistics" ThisKey="match_id" OtherKey="match_id" Type="PlayerMatchStatistic" />
+      <Association Name="Competition_Match" Member="Competition" ThisKey="competition_id" OtherKey="competition_id" Type="Competition" IsForeignKey="true" />
+      <Association Name="Team_Match" Member="Team" ThisKey="away_team_id" OtherKey="team_id" Type="Team" IsForeignKey="true" />
+      <Association Name="Team_Match1" Member="Team1" ThisKey="home_team_id" OtherKey="team_id" Type="Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MedicalRecord" Member="MedicalRecords">
+    <Type Name="MedicalRecord">
+      <Column Name="record_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="player_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="checkup_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="blood_type" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="allergies" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="medical_notes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="fitness_level" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Player_MedicalRecord" Member="Player" ThisKey="player_id" OtherKey="player_id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Player" Member="Players">
+    <Type Name="Player">
+      <Column Name="player_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="player_name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="jersey_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="position" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="date_of_birth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="nationality" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="height" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="weight" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="preferred_foot" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="join_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="contract_end_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="market_value" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="salary" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="previous_club" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Player_Contract" Member="Contracts" ThisKey="player_id" OtherKey="player_id" Type="Contract" />
+      <Association Name="Player_Injury" Member="Injuries" ThisKey="player_id" OtherKey="player_id" Type="Injury" />
+      <Association Name="Player_MedicalRecord" Member="MedicalRecords" ThisKey="player_id" OtherKey="player_id" Type="MedicalRecord" />
+      <Association Name="Player_PlayerAttendance" Member="PlayerAttendances" ThisKey="player_id" OtherKey="player_id" Type="PlayerAttendance" />
+      <Association Name="Player_PlayerMatchStatistic" Member="PlayerMatchStatistics" ThisKey="player_id" OtherKey="player_id" Type="PlayerMatchStatistic" />
+      <Association Name="Player_SeasonStatistic" Member="SeasonStatistics" ThisKey="player_id" OtherKey="player_id" Type="SeasonStatistic" />
+      <Association Name="Player_Transfer" Member="Transfers" ThisKey="player_id" OtherKey="player_id" Type="Transfer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PlayerAttendance" Member="PlayerAttendances">
+    <Type Name="PlayerAttendance">
+      <Column Name="attendance_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="session_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="player_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="attendance_status" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Player_PlayerAttendance" Member="Player" ThisKey="player_id" OtherKey="player_id" Type="Player" IsForeignKey="true" />
+      <Association Name="TrainingSession_PlayerAttendance" Member="TrainingSession" ThisKey="session_id" OtherKey="session_id" Type="TrainingSession" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PlayerMatchStatistics" Member="PlayerMatchStatistics">
+    <Type Name="PlayerMatchStatistic">
+      <Column Name="stat_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="player_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="match_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="minutes_played" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="goals" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="assists" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="yellow_cards" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="red_cards" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shots" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shots_on_target" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="passes_completed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="passes_attempted" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tackles" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="interceptions" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fouls_committed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fouls_suffered" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rating" Type="System.Decimal" DbType="Decimal(3,1)" CanBeNull="true" />
+      <Association Name="Match_PlayerMatchStatistic" Member="Match" ThisKey="match_id" OtherKey="match_id" Type="Match" IsForeignKey="true" />
+      <Association Name="Player_PlayerMatchStatistic" Member="Player" ThisKey="player_id" OtherKey="player_id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SeasonStatistics" Member="SeasonStatistics">
+    <Type Name="SeasonStatistic">
+      <Column Name="season_stat_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="player_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="season" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="matches_played" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="goals" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="assists" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="yellow_cards" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="red_cards" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="minutes_played" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Player_SeasonStatistic" Member="Player" ThisKey="player_id" OtherKey="player_id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stadium" Member="Stadiums">
+    <Type Name="Stadium">
+      <Column Name="stadium_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="stadium_name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="capacity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="opened_year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="surface_type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Team" Member="Teams">
+    <Type Name="Team">
+      <Column Name="team_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="team_name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="stadium" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="founded_year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="logo_url" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Team_Match" Member="Matches" ThisKey="team_id" OtherKey="away_team_id" Type="Match" />
+      <Association Name="Team_Match1" Member="Matches1" ThisKey="team_id" OtherKey="home_team_id" Type="Match" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrainingSession" Member="TrainingSessions">
+    <Type Name="TrainingSession">
+      <Column Name="session_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="session_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="duration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="session_type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="location" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="coach_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="TrainingSession_PlayerAttendance" Member="PlayerAttendances" ThisKey="session_id" OtherKey="session_id" Type="PlayerAttendance" />
+      <Association Name="Coach_TrainingSession" Member="Coach" ThisKey="coach_id" OtherKey="coach_id" Type="Coach" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transfer" Member="Transfers">
+    <Type Name="Transfer">
+      <Column Name="transfer_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="player_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="transfer_type" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="from_club" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="to_club" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="transfer_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="transfer_fee" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="contract_length" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Player_Transfer" Member="Player" ThisKey="player_id" OtherKey="player_id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Trophy" Member="Trophies">
+    <Type Name="Trophy">
+      <Column Name="trophy_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="trophy_name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="competition_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="season" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="win_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Competition_Trophy" Member="Competition" ThisKey="competition_id" OtherKey="competition_id" Type="Competition" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

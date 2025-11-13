@@ -57,9 +57,10 @@
             this.panelLogin.Controls.Add(this.txtUser);
             this.panelLogin.Controls.Add(this.pictureBox1);
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelLogin.Location = new System.Drawing.Point(467, 0);
+            this.panelLogin.Location = new System.Drawing.Point(622, 0);
+            this.panelLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(317, 461);
+            this.panelLogin.Size = new System.Drawing.Size(423, 567);
             this.panelLogin.TabIndex = 1;
             // 
             // lblLoginViewer
@@ -67,9 +68,10 @@
             this.lblLoginViewer.AutoSize = true;
             this.lblLoginViewer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginViewer.LinkColor = System.Drawing.Color.Black;
-            this.lblLoginViewer.Location = new System.Drawing.Point(85, 420);
+            this.lblLoginViewer.Location = new System.Drawing.Point(113, 517);
+            this.lblLoginViewer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLoginViewer.Name = "lblLoginViewer";
-            this.lblLoginViewer.Size = new System.Drawing.Size(160, 13);
+            this.lblLoginViewer.Size = new System.Drawing.Size(207, 17);
             this.lblLoginViewer.TabIndex = 7;
             this.lblLoginViewer.TabStop = true;
             this.lblLoginViewer.Text = "Đăng nhập với tư cách là khách";
@@ -78,9 +80,10 @@
             // lblForgetPass
             // 
             this.lblForgetPass.AutoSize = true;
-            this.lblForgetPass.Location = new System.Drawing.Point(219, 374);
+            this.lblForgetPass.Location = new System.Drawing.Point(292, 460);
+            this.lblForgetPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblForgetPass.Name = "lblForgetPass";
-            this.lblForgetPass.Size = new System.Drawing.Size(86, 13);
+            this.lblForgetPass.Size = new System.Drawing.Size(103, 16);
             this.lblForgetPass.TabIndex = 6;
             this.lblForgetPass.TabStop = true;
             this.lblForgetPass.Text = "Quên mật khẩu?";
@@ -89,21 +92,26 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(104, 365);
+            this.btnLogin.Location = new System.Drawing.Point(139, 449);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(109, 28);
+            this.btnLogin.Size = new System.Drawing.Size(145, 34);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Đăng Nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter_1);
+            this.btnLogin.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave_1);
             // 
             // imgPass
             // 
             this.imgPass.Image = global::FakeMadrid.Properties.Resources.iconPasss;
-            this.imgPass.Location = new System.Drawing.Point(16, 310);
+            this.imgPass.Location = new System.Drawing.Point(21, 382);
+            this.imgPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgPass.Name = "imgPass";
-            this.imgPass.Size = new System.Drawing.Size(37, 29);
+            this.imgPass.Size = new System.Drawing.Size(49, 36);
             this.imgPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPass.TabIndex = 4;
             this.imgPass.TabStop = false;
@@ -111,9 +119,10 @@
             // imgUser
             // 
             this.imgUser.Image = global::FakeMadrid.Properties.Resources.iconUser;
-            this.imgUser.Location = new System.Drawing.Point(16, 247);
+            this.imgUser.Location = new System.Drawing.Point(21, 304);
+            this.imgUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgUser.Name = "imgUser";
-            this.imgUser.Size = new System.Drawing.Size(37, 29);
+            this.imgUser.Size = new System.Drawing.Size(49, 36);
             this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgUser.TabIndex = 3;
             this.imgUser.TabStop = false;
@@ -123,9 +132,11 @@
             this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPass.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(59, 310);
+            this.txtPass.Location = new System.Drawing.Point(79, 382);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(246, 29);
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(327, 35);
             this.txtPass.TabIndex = 2;
             // 
             // txtUser
@@ -133,9 +144,10 @@
             this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUser.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(59, 247);
+            this.txtUser.Location = new System.Drawing.Point(79, 304);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(246, 29);
+            this.txtUser.Size = new System.Drawing.Size(327, 35);
             this.txtUser.TabIndex = 1;
             // 
             // pictureBox1
@@ -144,8 +156,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::FakeMadrid.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(317, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(423, 199);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -156,21 +169,24 @@
             this.panelPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelPicture.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelPicture.Location = new System.Drawing.Point(0, 0);
+            this.panelPicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelPicture.Name = "panelPicture";
-            this.panelPicture.Size = new System.Drawing.Size(468, 461);
+            this.panelPicture.Size = new System.Drawing.Size(624, 567);
             this.panelPicture.TabIndex = 0;
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(1045, 567);
+            this.ControlBox = false;
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.panelPicture);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đăng nhập tài khoản";
+            this.Text = "ĐĂNG NHẬP";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();

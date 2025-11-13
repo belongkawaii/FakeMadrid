@@ -46,18 +46,18 @@ namespace FakeMadrid.Views
             frmLogin login = new frmLogin();
             login.ShowDialog(); // Dừng lại cho đến khi form login đóng
 
-            //if (login.IsLoginSuccess)
-            //{
-            //    lblInfor.Text = $"Xin chào, {login.LoggedUser}!";
-            //    LogoutToolStripMenuItem.Visible = true;
-            //    LoginToolStripMenuItem.Visible = false;
-            //}
-            //else
-            //{
-            //    lblInfor.Text = "Bạn chưa đăng nhập!";
-            //    LogoutToolStripMenuItem.Visible = false;
-            //    LoginToolStripMenuItem.Visible = true;
-            //}
+            if (login.IsLoginSuccess)
+            {
+                lblInfor.Text = $"Xin chào, {login.LoggedUser}!";
+                LogoutToolStripMenuItem.Visible = true;
+                LoginToolStripMenuItem.Visible = false;
+            }
+            else
+            {
+                lblInfor.Text = "Bạn chưa đăng nhập!";
+                LogoutToolStripMenuItem.Visible = false;
+                LoginToolStripMenuItem.Visible = true;
+            }
         }
 
         private void listCeoToolStripMenuItem_Click(object sender, EventArgs e)

@@ -81,12 +81,31 @@ namespace FakeMadrid.Views
         {
 
         }
-
+        public bool IsLoginSuccess = false;
+        public string LoggedUser = "";
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text == "son" && txtPass.Text == "son")
+            string user = txtUser.Text.Trim();
+            string pass = txtPass.Text.Trim();
+            if (user == "CEO" && pass == "ceo!")
             {
-                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xin chào CEO!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoggedUser = "CEO";
+                IsLoginSuccess = true;
+                this.Close(); // Đóng form login
+            }
+            else if (user == "CT" && pass == "ct!")
+            {
+                MessageBox.Show("Xin chào Cầu thủ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoggedUser = "Cầu thủ";
+                IsLoginSuccess = true;
+                this.Close();
+            }
+            else if (user == "HLV" && pass == "hlv!")
+            {
+                MessageBox.Show("Xin chào HLV!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoggedUser = "HLV";
+                IsLoginSuccess = true;
                 this.Close();
             }
             else
@@ -106,5 +125,16 @@ namespace FakeMadrid.Views
         }
         #endregion
 
+        private void btnLogin_MouseEnter_1(object sender, EventArgs e)
+        {
+            btnLogin.BackColor = Color.MediumSeaGreen;
+            btnLogin.ForeColor = Color.White;
+        }
+
+        private void btnLogin_MouseLeave_1(object sender, EventArgs e)
+        {
+            btnLogin.BackColor = SystemColors.Control;
+            btnLogin.ForeColor = Color.Black;
+        }
     }
 }
