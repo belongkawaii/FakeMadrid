@@ -76,5 +76,11 @@ namespace FakeMadrid.Views
             frmListPlayer frm = new frmListPlayer();
             frm.Show();
         }
+
+        private void ListCoachToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListCoach frm = new frmListCoach();
+            frm.Show();
+        }
     }
 }
