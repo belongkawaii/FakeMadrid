@@ -32,45 +32,45 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -109,7 +109,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1198, 674);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1198, 649);
             this.flowLayoutPanel2.TabIndex = 3;
             this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
@@ -131,6 +131,16 @@
             this.panel2.Size = new System.Drawing.Size(669, 196);
             this.panel2.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(118, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "11 December 2000.";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,16 +161,6 @@
             this.panel3.Size = new System.Drawing.Size(290, 196);
             this.panel3.TabIndex = 3;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(118, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "11 December 2000.";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // panel4
             // 
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
@@ -180,24 +180,15 @@
             this.panel5.Size = new System.Drawing.Size(669, 196);
             this.panel5.TabIndex = 5;
             // 
-            // panel6
+            // label5
             // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Location = new System.Drawing.Point(884, 205);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(290, 196);
-            this.panel6.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 32);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Champions Leagues";
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(3, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 101);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "15";
             // 
             // label4
             // 
@@ -209,15 +200,24 @@
             this.label4.Text = "1955-56  1956-57  1957-58  1958-59  1959-60  1965-66  1997-98  \r\n1999-00  2001-02" +
     "  2013-14  2015-16  2016-17  2017-18  2021-22  2023-24";
             // 
-            // label5
+            // label3
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(3, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 101);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "15";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(116, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(292, 32);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Champions Leagues";
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Location = new System.Drawing.Point(884, 205);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(290, 196);
+            this.panel6.TabIndex = 6;
             // 
             // panel7
             // 
@@ -238,6 +238,36 @@
             this.panel8.Size = new System.Drawing.Size(669, 196);
             this.panel8.TabIndex = 9;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(40, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 82);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "9";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(126, 100);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(265, 40);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "2014  2016  2017  2018  2023  2024\r\n1960  1998  2002";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(122, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(314, 32);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "FIFA Club World Cups";
+            // 
             // panel9
             // 
             this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
@@ -256,36 +286,6 @@
             this.panel10.Size = new System.Drawing.Size(200, 196);
             this.panel10.TabIndex = 11;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(122, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(314, 32);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "FIFA Club World Cups";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(126, 100);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(265, 40);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "2014  2016  2017  2018  2023  2024\r\n1960  1998  2002";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(40, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 82);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "9";
-            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.label11);
@@ -295,6 +295,36 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(669, 196);
             this.panel11.TabIndex = 12;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label11.Location = new System.Drawing.Point(45, 68);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(76, 82);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "6";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(143, 118);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(265, 20);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "2002  2014  2016  2017  2022  2024";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(135, 68);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(313, 32);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "European Super Cups";
             // 
             // panel12
             // 
@@ -324,64 +354,6 @@
             this.panel14.Size = new System.Drawing.Size(669, 196);
             this.panel14.TabIndex = 14;
             // 
-            // panel15
-            // 
-            this.panel15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel15.BackgroundImage")));
-            this.panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel15.Location = new System.Drawing.Point(884, 811);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(290, 196);
-            this.panel15.TabIndex = 15;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(135, 68);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(313, 32);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "European Super Cups";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(143, 118);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(265, 20);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "2002  2014  2016  2017  2022  2024";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label11.Location = new System.Drawing.Point(45, 68);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 82);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "6";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(141, 57);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(171, 32);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "UEFA Cups";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(143, 122);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(135, 20);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "1984-85  1985-86";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -393,6 +365,34 @@
             this.label14.TabIndex = 2;
             this.label14.Text = "2";
             this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(143, 122);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(135, 20);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "1984-85  1985-86";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(141, 57);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(171, 32);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "UEFA Cups";
+            // 
+            // panel15
+            // 
+            this.panel15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel15.BackgroundImage")));
+            this.panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel15.Location = new System.Drawing.Point(884, 811);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(290, 196);
+            this.panel15.TabIndex = 15;
             // 
             // panel16
             // 
@@ -412,6 +412,35 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(669, 196);
             this.panel17.TabIndex = 16;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label17.Location = new System.Drawing.Point(3, 66);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(118, 84);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "36";
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(115, 83);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(551, 104);
+            this.label16.TabIndex = 1;
+            this.label16.Text = resources.GetString("label16.Text");
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(124, 41);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(131, 32);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Leagues";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // panel18
             // 
@@ -440,64 +469,6 @@
             this.panel20.Size = new System.Drawing.Size(669, 196);
             this.panel20.TabIndex = 19;
             // 
-            // panel21
-            // 
-            this.panel21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel21.BackgroundImage")));
-            this.panel21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel21.Location = new System.Drawing.Point(884, 1215);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(290, 196);
-            this.panel21.TabIndex = 20;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(124, 41);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(131, 32);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Leagues";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // label16
-            // 
-            this.label16.Location = new System.Drawing.Point(115, 83);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(551, 104);
-            this.label16.TabIndex = 1;
-            this.label16.Text = resources.GetString("label16.Text");
-            // 
-            // label17
-            // 
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label17.Location = new System.Drawing.Point(3, 66);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(118, 84);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "36";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(135, 39);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(203, 32);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Spanish Cups";
-            // 
-            // label19
-            // 
-            this.label19.Location = new System.Drawing.Point(118, 86);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(514, 79);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "1905  1906  1907  1908  1917  1933-34  1935-36  1945-46  1946-47  1961-62  1969-7" +
-    "0  1973-74  1974-75  1979-80  1981-82  1988-89  1992-93  2010-11  2013-14  2022-" +
-    "23";
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -509,12 +480,41 @@
             this.label20.TabIndex = 2;
             this.label20.Text = "20";
             // 
+            // label19
+            // 
+            this.label19.Location = new System.Drawing.Point(118, 86);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(514, 79);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "1905  1906  1907  1908  1917  1933-34  1935-36  1945-46  1946-47  1961-62  1969-7" +
+    "0  1973-74  1974-75  1979-80  1981-82  1988-89  1992-93  2010-11  2013-14  2022-" +
+    "23";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(135, 39);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(203, 32);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Spanish Cups";
+            // 
+            // panel21
+            // 
+            this.panel21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel21.BackgroundImage")));
+            this.panel21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel21.Location = new System.Drawing.Point(884, 1215);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(290, 196);
+            this.panel21.TabIndex = 20;
+            // 
             // frmDanhHieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1198, 674);
+            this.ClientSize = new System.Drawing.Size(1198, 649);
             this.Controls.Add(this.flowLayoutPanel2);
             this.HelpButton = true;
             this.Name = "frmDanhHieu";
