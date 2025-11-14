@@ -70,6 +70,12 @@
     <Compile Include="Views\frmCEOInfor.Designer.cs">
       <DependentUpon>frmCEOInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmDanhHieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmDanhHieu.Designer.cs">
+      <DependentUpon>frmDanhHieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <EmbeddedResource Include="Views\frmCEOInfor.resx">
       <DependentUpon>frmCEOInfor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmDanhHieu.resx">
+      <DependentUpon>frmDanhHieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Resources\frmDanhHieu\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\frmLogin\ImageSanNha.jpg" />

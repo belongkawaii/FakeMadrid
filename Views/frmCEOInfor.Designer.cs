@@ -38,9 +38,10 @@
             // 
             // imgCEO
             // 
-            this.imgCEO.Location = new System.Drawing.Point(23, 104);
+            this.imgCEO.Location = new System.Drawing.Point(34, 160);
+            this.imgCEO.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.imgCEO.Name = "imgCEO";
-            this.imgCEO.Size = new System.Drawing.Size(150, 200);
+            this.imgCEO.Size = new System.Drawing.Size(225, 308);
             this.imgCEO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgCEO.TabIndex = 0;
             this.imgCEO.TabStop = false;
@@ -49,9 +50,10 @@
             // 
             this.panelText.BackColor = System.Drawing.Color.White;
             this.panelText.Controls.Add(this.lblText);
-            this.panelText.Location = new System.Drawing.Point(209, 104);
+            this.panelText.Location = new System.Drawing.Point(314, 160);
+            this.panelText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelText.Name = "panelText";
-            this.panelText.Size = new System.Drawing.Size(500, 200);
+            this.panelText.Size = new System.Drawing.Size(750, 308);
             this.panelText.TabIndex = 1;
             // 
             // lblText
@@ -60,8 +62,9 @@
             this.lblText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblText.Location = new System.Drawing.Point(0, 0);
+            this.lblText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(0, 21);
+            this.lblText.Size = new System.Drawing.Size(0, 33);
             this.lblText.TabIndex = 0;
             // 
             // lblExit
@@ -69,25 +72,27 @@
             this.lblExit.AutoSize = true;
             this.lblExit.BackColor = System.Drawing.Color.Transparent;
             this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExit.Location = new System.Drawing.Point(740, 9);
+            this.lblExit.Location = new System.Drawing.Point(1110, 14);
+            this.lblExit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(48, 33);
+            this.lblExit.Size = new System.Drawing.Size(70, 52);
             this.lblExit.TabIndex = 2;
             this.lblExit.Text = "❌";
             this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // frmCEOInfor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FakeMadrid.Properties.Resources.BackgoundCEO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.panelText);
             this.Controls.Add(this.imgCEO);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmCEOInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCEOInfor";
