@@ -36,6 +36,7 @@
             this.mStripToolBox = new System.Windows.Forms.MenuStrip();
             this.SystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SigninToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.LogoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +57,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblInfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.SigninToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgTrophy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -78,6 +78,7 @@
             // 
             // imgTrophy
             // 
+            this.imgTrophy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgTrophy.Dock = System.Windows.Forms.DockStyle.Right;
             this.imgTrophy.Image = global::FakeMadrid.Properties.Resources._15C1_removebg_preview;
             this.imgTrophy.Location = new System.Drawing.Point(1774, 0);
@@ -87,6 +88,7 @@
             this.imgTrophy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgTrophy.TabIndex = 3;
             this.imgTrophy.TabStop = false;
+            this.imgTrophy.Click += new System.EventHandler(this.TitleToolStripMenuItem_Click);
             // 
             // imgLogo
             // 
@@ -142,6 +144,13 @@
             this.LoginToolStripMenuItem.Text = "ĐĂNG &NHẬP";
             this.LoginToolStripMenuItem.Click += new System.EventHandler(this.LoginToolStripMenuItem_Click);
             // 
+            // SigninToolStripMenuItem
+            // 
+            this.SigninToolStripMenuItem.Name = "SigninToolStripMenuItem";
+            this.SigninToolStripMenuItem.Size = new System.Drawing.Size(340, 30);
+            this.SigninToolStripMenuItem.Text = "ĐĂNG KÝ";
+            this.SigninToolStripMenuItem.Click += new System.EventHandler(this.đĂNGKÝToolStripMenuItem_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -178,6 +187,7 @@
             this.TitleToolStripMenuItem.Name = "TitleToolStripMenuItem";
             this.TitleToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
             this.TitleToolStripMenuItem.Text = "DANH HIỆU";
+            this.TitleToolStripMenuItem.Click += new System.EventHandler(this.TitleToolStripMenuItem_Click);
             // 
             // MatchScheduleMenuItem
             // 
@@ -284,13 +294,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // SigninToolStripMenuItem
-            // 
-            this.SigninToolStripMenuItem.Name = "SigninToolStripMenuItem";
-            this.SigninToolStripMenuItem.Size = new System.Drawing.Size(340, 30);
-            this.SigninToolStripMenuItem.Text = "ĐĂNG KÝ";
-            this.SigninToolStripMenuItem.Click += new System.EventHandler(this.đĂNGKÝToolStripMenuItem_Click);
-            // 
             // frmDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -305,7 +308,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDashBoard";
+            this.Text = "DashBoard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmDashBoard_Load);
             this.panelHead.ResumeLayout(false);

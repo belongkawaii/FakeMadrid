@@ -1,4 +1,5 @@
-﻿using FakeMadrid.Database;
+﻿using FakeMadrid.Controllers;
+using FakeMadrid.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,10 +23,18 @@ namespace FakeMadrid.Views
 
         private void frmListPlayer_Load(object sender, EventArgs e)
         {
+            int level = SessionManager.LoggedLevel;
+            if(level != 0)
+            {
+                btnThem.Enabled = false;
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+            }
             // Thêm lựa chọn lọc
             cbbTrangThai.SelectedIndex = 0;
 
             loadData();
+            
         }
 
         private void loadData()
@@ -101,6 +110,7 @@ namespace FakeMadrid.Views
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
+            
             // 1. Kiểm tra ID
             if (string.IsNullOrWhiteSpace(txtPlayerId.Text))
             {
@@ -400,5 +410,7 @@ namespace FakeMadrid.Views
         {
             loadData();
         }
+
+       
     }
 }

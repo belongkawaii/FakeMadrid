@@ -106,7 +106,7 @@
         <classShapeMoniker Id="0aa23d82-79fd-4d65-8503-e6769d3e9c25" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 11.25); (1.75 : 9.34375); (6.04166666666667 : 9.34375 : JumpStart); (6.20833333333333 : 9.34375 : JumpEnd); (6.5 : 9.34375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(1.75 : 11.25); (1.75 : 9.34375); (6.5 : 9.34375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Player/Player_Contract" />
       <nodes>
         <classShapeMoniker Id="5469443f-2524-4129-b5a0-25d77e6d0550" />
@@ -127,7 +127,7 @@
         <classShapeMoniker Id="084a4d4a-cec4-4c0a-97aa-176324fa8223" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 12.53125); (6.04166666666667 : 12.53125 : JumpStart); (6.20833333333333 : 12.53125 : JumpEnd); (6.5 : 12.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 12.53125); (6.5 : 12.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Player/Player_PlayerAttendance" />
       <nodes>
         <classShapeMoniker Id="5469443f-2524-4129-b5a0-25d77e6d0550" />
@@ -141,7 +141,7 @@
         <classShapeMoniker Id="e21c0c22-7e1f-489a-91f9-5c1efe08f4a9" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 12.2027498372396); (6.04166666666667 : 12.2027498372396 : JumpStart); (6.20833333333333 : 12.2027498372396 : JumpEnd); (9.46875 : 12.2027498372396); (9.46875 : 15.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 12.2027498372396); (9.46875 : 12.2027498372396); (9.46875 : 15.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Player/Player_PlayerMatchStatistic" />
       <nodes>
         <classShapeMoniker Id="5469443f-2524-4129-b5a0-25d77e6d0550" />
@@ -162,7 +162,7 @@
         <classShapeMoniker Id="0aa23d82-79fd-4d65-8503-e6769d3e9c25" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3 : 25.9066524251302); (3.75 : 25.9066524251302)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(3 : 25.9066524251302); (3.29166666666667 : 25.9066524251302 : JumpStart); (3.45833333333333 : 25.9066524251302 : JumpEnd); (3.75 : 25.9066524251302)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Team/Team_Match1" />
       <nodes>
         <classShapeMoniker Id="87c32851-243b-4ebb-8383-a732c385acf7" />
@@ -176,7 +176,7 @@
         <classShapeMoniker Id="637a5225-287c-4ca4-bfb9-d0cf76be8217" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.7187475 : 5.875); (4.7187475 : 4.40549967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.7187475 : 5.875); (4.7187475 : 4.40549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Coach/Coach_TrainingSession" />
       <nodes>
         <classShapeMoniker Id="0d2c6981-80c0-402e-aaaf-0be065f295a1" />

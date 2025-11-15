@@ -305,11 +305,11 @@
             // 
             this.cbbTrangThai.FormattingEnabled = true;
             this.cbbTrangThai.Items.AddRange(new object[] {
+            "All",
             "Active",
             "Injured",
             "Suspended",
-            "Loan",
-            "All"});
+            "Loan"});
             this.cbbTrangThai.Location = new System.Drawing.Point(1219, 257);
             this.cbbTrangThai.Name = "cbbTrangThai";
             this.cbbTrangThai.Size = new System.Drawing.Size(298, 34);
@@ -842,7 +842,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListPlayer";
             this.Text = "DANH SÁCH CẦU THỦ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmListPlayer_Load);
             this.panelFooter.ResumeLayout(false);
             this.grbChucNang.ResumeLayout(false);

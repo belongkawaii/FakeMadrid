@@ -1,4 +1,5 @@
-﻿using FakeMadrid.Database;
+﻿using FakeMadrid.Controllers;
+using FakeMadrid.Database;
 using Microsoft.Reporting.WinForms;
 using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 using System;
@@ -29,14 +30,37 @@ namespace FakeMadrid.Views
         }
         private void frmPlayerPrinter_Load(object sender, EventArgs e)
         {
-            //Truyền thông tin dữ liệu vào data
-            ReportParameter[] para = new ReportParameter[1];
-            para[0] = new ReportParameter("nguoidung", "CEO");
-            this.reportViewer1.LocalReport.SetParameters(para); //Truyền dữ liệu vào report
-            this.reportViewer1.LocalReport.DataSources.Clear();
-
             DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
-            this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource ("DataSetPlayer", db.Players.OrderBy(p => p.player_id)));
+
+            // Đếm số lượng
+            int soLuong = (Status == "All")
+                ? db.Players.Count()
+                : db.Players.Count(p => p.status == Status);
+
+            // Tạo parameter
+            ReportParameter[] para = new ReportParameter[3];
+            para[0] = new ReportParameter("nguoidung", SessionManager.LoggedUser);
+            para[1] = new ReportParameter("Status", Status);
+            para[2] = new ReportParameter("soluong", soLuong.ToString());  // <-- Quan trọng
+
+            this.reportViewer1.LocalReport.DataSources.Clear();
+            this.reportViewer1.LocalReport.SetParameters(para);
+
+            // Load data
+            if (Status == "All")
+            {
+                this.reportViewer1.LocalReport.DataSources.Add(
+                    new ReportDataSource("DataSetPlayer",
+                    db.Players.OrderBy(p => p.player_id))
+                );
+            }
+            else
+            {
+                this.reportViewer1.LocalReport.DataSources.Add(
+                    new ReportDataSource("DataSetPlayer",
+                    db.Players.Where(p => p.status == Status).OrderBy(p => p.player_id))
+                );
+            }
 
             this.reportViewer1.RefreshReport();
         }

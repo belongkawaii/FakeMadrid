@@ -32,7 +32,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.CoachRole = new System.Windows.Forms.ComboBox();
+            this.cbbRole = new System.Windows.Forms.ComboBox();
             this.dtpNgayHetHan = new System.Windows.Forms.DateTimePicker();
             this.txtLuong = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -121,18 +121,20 @@
             this.label17.TabIndex = 35;
             this.label17.Text = "Số điện thoại";
             // 
-            // CoachRole
+            // cbbRole
             // 
-            this.CoachRole.FormattingEnabled = true;
-            this.CoachRole.Items.AddRange(new object[] {
+            this.cbbRole.FormattingEnabled = true;
+            this.cbbRole.Items.AddRange(new object[] {
+            "All",
             "Head Coach",
             "Assistant Coach",
             "Goalkeeping Coach"});
-            this.CoachRole.Location = new System.Drawing.Point(165, 149);
-            this.CoachRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CoachRole.Name = "CoachRole";
-            this.CoachRole.Size = new System.Drawing.Size(297, 34);
-            this.CoachRole.TabIndex = 3;
+            this.cbbRole.Location = new System.Drawing.Point(165, 149);
+            this.cbbRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbRole.Name = "cbbRole";
+            this.cbbRole.Size = new System.Drawing.Size(297, 34);
+            this.cbbRole.TabIndex = 3;
+            this.cbbRole.SelectedIndexChanged += new System.EventHandler(this.CoachRole_SelectedIndexChanged);
             // 
             // dtpNgayHetHan
             // 
@@ -451,7 +453,7 @@
             this.grbInfor.Controls.Add(this.label16);
             this.grbInfor.Controls.Add(this.txtPhoneNumber);
             this.grbInfor.Controls.Add(this.label17);
-            this.grbInfor.Controls.Add(this.CoachRole);
+            this.grbInfor.Controls.Add(this.cbbRole);
             this.grbInfor.Controls.Add(this.dtpNgayHetHan);
             this.grbInfor.Controls.Add(this.txtLuong);
             this.grbInfor.Controls.Add(this.label13);
@@ -596,7 +598,7 @@
             this.Controls.Add(this.panelFooter);
             this.Controls.Add(this.panelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListCoach";
             this.Text = "frmListCoach";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -617,7 +619,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox CoachRole;
+        private System.Windows.Forms.ComboBox cbbRole;
         private System.Windows.Forms.DateTimePicker dtpNgayHetHan;
         private System.Windows.Forms.TextBox txtLuong;
         private System.Windows.Forms.Label label13;

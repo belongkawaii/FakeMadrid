@@ -99,46 +99,44 @@ namespace FakeMadrid.Views
         }
         private void btnSignin_Click(object sender, EventArgs e)
         {
-           //kiem tra dien thong tin day du
-           if(txtUser.Text == "" || txtPass.Text == "" || txtPassCheck.Text == "")
+            if (txtUser.Text == "" || txtPass.Text == "" || txtPassCheck.Text == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            //kiem tra mat khau co trung lap
-            if(txtPass.Text != txtPassCheck.Text)
+            if (txtPass.Text != txtPassCheck.Text)
             {
                 lblPassCheck.Visible = true;
                 MessageBox.Show("Mật khẩu xác nhận không khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            //tao ma OTP ngau nhien
+
             string taikhoan = txtUser.Text;
             string matkhau = txtPass.Text;
-            Random rd = new Random();
-            string otp = rd.Next(1000, 9999).ToString();
+            string otp = new Random().Next(1000, 9999).ToString();
 
-            //ma hoa mat khau
             MD5 md5 = MD5.Create();
-            byte[] inputBytes = Encoding.UTF8.GetBytes(matkhau+otp);
+            byte[] inputBytes = Encoding.UTF8.GetBytes(matkhau + otp);
             byte[] hashBytes = md5.ComputeHash(inputBytes);
-
-            //tao va them vao csdl
+            
             DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
-            Account nd = new Account();
-            nd.Username = taikhoan;
-            nd.Password = hashBytes;
-            nd.Email = "";
-            nd.OTP = otp;
-            nd.OTPDateSend = DateTime.Now;
-            nd.DateCreated = DateTime.Now;
-            nd.Active = false;
-            nd.DateActive = null;
-            nd.IDLevel = 3; //tao acc nguoi xem
+            Account nd = new Account
+            {
+                Username = taikhoan,
+                Password = hashBytes,
+                Email = "",
+                OTP = otp,
+                OTPDateSend = DateTime.Now,
+                DateCreated = DateTime.Now,
+                Active = false,
+                DateActive = null,
+                IDLevel = 3
+            };
 
             db.Accounts.InsertOnSubmit(nd);
             db.SubmitChanges();
+
             MessageBox.Show("Tạo tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }

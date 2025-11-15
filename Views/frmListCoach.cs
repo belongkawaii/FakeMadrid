@@ -16,18 +16,65 @@ namespace FakeMadrid.Views
         public frmListCoach()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void frmListCoach_Load(object sender, EventArgs e)
         {
+            cbbRole.SelectedIndex = 0;
             loadData();
-            this.WindowState = FormWindowState.Maximized;
+           
         
         }
         private void loadData()
         {
             DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
-            dgvCoach.DataSource = db.Coaches.OrderBy(p => p.coach_id);
+            string role = cbbRole.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(role) || role == "All")
+            {
+                dgvCoach.DataSource = db.Coaches
+                    .OrderBy(p => p.coach_id)
+                    .Select(p => new
+                    {
+                        p.coach_id,
+                        p.coach_name,
+                        p.coach_birthday,
+                        p.nationality,
+                        p.role,
+                        p.hire_date,
+                        p.contract_end_date,
+                        p.salary,
+                        p.phone,
+                        p.email
+                    })
+                    .ToList();
+            }
+            else
+            {
+                dgvCoach.DataSource = db.Coaches
+                    .Where(p => p.role == role)
+                    .OrderBy(p => p.coach_id)
+                    .Select(p => new
+                    {
+                        p.coach_id,
+                        p.coach_name,
+                        p.coach_birthday,
+                        p.nationality,
+                        p.role,
+                        p.hire_date,
+                        p.contract_end_date,
+                        p.salary,
+                        p.phone,
+                        p.email
+                    })
+                    .ToList();
+            }
+
+            dgvCoach.Columns["coach_birthday"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvCoach.Columns["coach_hiredate"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvCoach.Columns["coach_contract"].DefaultCellStyle.Format = "dd/MM/yyyy";
+
 
         }
         #region Nút chức năng
@@ -62,11 +109,11 @@ namespace FakeMadrid.Views
                 return;
             }
 
-            string role = CoachRole.SelectedItem?.ToString();
+            string role = cbbRole.SelectedItem?.ToString();
             if (string.IsNullOrWhiteSpace(role))
             {
                 MessageBox.Show("Bạn phải chọn vai trò!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                CoachRole.Focus();
+                cbbRole.Focus();
                 return;
             }
 
@@ -123,7 +170,7 @@ namespace FakeMadrid.Views
             // Lấy dữ liệu input từ form
             int coachId = int.Parse(txtCoachId.Text); // IDENTITY, dùng để tìm bản ghi
             string coachName = txtCoachName.Text;
-            string role = CoachRole.SelectedItem.ToString();
+            string role = cbbRole.SelectedItem.ToString();
             DateTime dateOfBirth = dtpNgaySinh.Value;
             string email = txtEmail.Text;
             string phone = txtPhoneNumber.Text;
@@ -182,8 +229,8 @@ namespace FakeMadrid.Views
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            //frmPlayerPrinter frm = new frmPlayerPrinter(); // tạo form in danh sách HLV
-            //frm.Show();
+            frmCoachPrinter frm = new frmCoachPrinter(cbbRole.SelectedItem.ToString()); 
+            frm.Show();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -239,7 +286,7 @@ namespace FakeMadrid.Views
             {
                 txtCoachId.Text = coach.coach_id.ToString();
                 txtCoachName.Text = coach.coach_name;
-                CoachRole.SelectedItem = coach.role;
+                cbbRole.SelectedItem = coach.role;
                 dtpNgaySinh.Value = coach.coach_birthday.Value;
                 txtEmail.Text = coach.email;
                 txtPhoneNumber.Text = coach.phone;
@@ -251,5 +298,9 @@ namespace FakeMadrid.Views
         }
         #endregion
 
+        private void CoachRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadData();
+        }
     }
 }
