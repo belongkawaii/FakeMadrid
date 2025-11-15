@@ -82,5 +82,10 @@ namespace FakeMadrid.Views
             frmListCoach frm = new frmListCoach();
             frm.Show();
         }
+
+        private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

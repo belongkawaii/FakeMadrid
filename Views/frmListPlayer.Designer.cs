@@ -308,11 +308,13 @@
             "Active",
             "Injured",
             "Suspended",
-            "Loan"});
+            "Loan",
+            "All"});
             this.cbbTrangThai.Location = new System.Drawing.Point(1219, 257);
             this.cbbTrangThai.Name = "cbbTrangThai";
             this.cbbTrangThai.Size = new System.Drawing.Size(298, 34);
             this.cbbTrangThai.TabIndex = 14;
+            this.cbbTrangThai.SelectedIndexChanged += new System.EventHandler(this.cbbTrangThai_SelectedIndexChanged);
             // 
             // dtpNgayHetHan
             // 
