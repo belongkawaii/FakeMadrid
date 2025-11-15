@@ -16,6 +16,8 @@ namespace FakeMadrid.Views
         public frmListPlayer()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+        
         }
 
         private void frmListPlayer_Load(object sender, EventArgs e)

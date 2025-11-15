@@ -56,6 +56,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblInfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.SigninToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgTrophy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -70,7 +71,7 @@
             this.panelHead.Controls.Add(this.mStripToolBox);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
-            this.panelHead.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHead.Margin = new System.Windows.Forms.Padding(4);
             this.panelHead.Name = "panelHead";
             this.panelHead.Size = new System.Drawing.Size(1940, 73);
             this.panelHead.TabIndex = 0;
@@ -80,7 +81,7 @@
             this.imgTrophy.Dock = System.Windows.Forms.DockStyle.Right;
             this.imgTrophy.Image = global::FakeMadrid.Properties.Resources._15C1_removebg_preview;
             this.imgTrophy.Location = new System.Drawing.Point(1774, 0);
-            this.imgTrophy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgTrophy.Margin = new System.Windows.Forms.Padding(4);
             this.imgTrophy.Name = "imgTrophy";
             this.imgTrophy.Size = new System.Drawing.Size(83, 73);
             this.imgTrophy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,7 +93,7 @@
             this.imgLogo.Dock = System.Windows.Forms.DockStyle.Right;
             this.imgLogo.Image = global::FakeMadrid.Properties.Resources.Logo;
             this.imgLogo.Location = new System.Drawing.Point(1857, 0);
-            this.imgLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgLogo.Margin = new System.Windows.Forms.Padding(4);
             this.imgLogo.Name = "imgLogo";
             this.imgLogo.Size = new System.Drawing.Size(83, 73);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -123,6 +124,7 @@
             // 
             this.SystemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LoginToolStripMenuItem,
+            this.SigninToolStripMenuItem,
             this.toolStripSeparator1,
             this.LogoutToolStripMenuItem,
             this.ExitToolStripMenuItem});
@@ -282,6 +284,13 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // SigninToolStripMenuItem
+            // 
+            this.SigninToolStripMenuItem.Name = "SigninToolStripMenuItem";
+            this.SigninToolStripMenuItem.Size = new System.Drawing.Size(340, 30);
+            this.SigninToolStripMenuItem.Text = "ĐĂNG KÝ";
+            this.SigninToolStripMenuItem.Click += new System.EventHandler(this.đĂNGKÝToolStripMenuItem_Click);
+            // 
             // frmDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -291,8 +300,9 @@
             this.Controls.Add(this.panelHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.mStripToolBox;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDashBoard";
@@ -338,5 +348,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel lblInfor;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem SigninToolStripMenuItem;
     }
 }

@@ -44,6 +44,8 @@ namespace FakeMadrid.Views
         private void LoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmLogin login = new frmLogin();
+            login.MdiParent = this;
+            login.StartPosition = FormStartPosition.CenterParent;
             login.ShowDialog(); // Dừng lại cho đến khi form login đóng
 
             if (login.IsLoginSuccess)
@@ -63,6 +65,8 @@ namespace FakeMadrid.Views
         private void listCeoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCEO ceo = new frmCEO();
+            MdiParent = this;
+            ceo.StartPosition = FormStartPosition.CenterParent;
             ceo.Show();
         }
 
@@ -74,18 +78,30 @@ namespace FakeMadrid.Views
         private void PlayerListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListPlayer frm = new frmListPlayer();
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterParent;
             frm.Show();
         }
 
         private void ListCoachToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListCoach frm = new frmListCoach();
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterParent;
             frm.Show();
         }
 
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void đĂNGKÝToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSignin frm = new frmSignin();
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.Show();
         }
     }
 }

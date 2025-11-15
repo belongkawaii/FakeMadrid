@@ -20,17 +20,26 @@ namespace FakeMadrid.Views
             set { _iCount = value; }
         }
 
+
         private bool _locked;
         public bool locked
         {
             get { return _locked; }
             set { _locked = value; }
         }
+
+        private bool _isShowing;
+        public bool isShowing
+        {
+            get { return _isShowing; }
+            set { _isShowing = value; }
+        }
         public frmLogin()
         {
             InitializeComponent();
             iCount = 0;
             locked = false;
+            bool isShowing = false;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -123,6 +132,25 @@ namespace FakeMadrid.Views
             }
             
         }
+
+        private void SeePass_Click(object sender, EventArgs e)
+        {
+
+            if (isShowing)
+            {
+                // Ẩn lại thành *
+                txtPass.PasswordChar = '*';
+                SeePass.Text = "🙈";
+                isShowing = false;
+            }
+            else
+            {
+                // Hiển thị mật khẩu
+                txtPass.PasswordChar = '\0';
+                SeePass.Text = "👁";
+                isShowing = true;
+            }
+        }
         #endregion
 
         private void btnLogin_MouseEnter_1(object sender, EventArgs e)
@@ -136,5 +164,7 @@ namespace FakeMadrid.Views
             btnLogin.BackColor = SystemColors.Control;
             btnLogin.ForeColor = Color.Black;
         }
+
+        
     }
 }

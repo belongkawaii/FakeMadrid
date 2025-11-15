@@ -106,7 +106,7 @@
             this.panelFooter.Controls.Add(this.grbChucNang);
             this.panelFooter.Controls.Add(this.grbInfor);
             this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFooter.Location = new System.Drawing.Point(0, 601);
+            this.panelFooter.Location = new System.Drawing.Point(0, 589);
             this.panelFooter.Name = "panelFooter";
             this.panelFooter.Size = new System.Drawing.Size(1924, 386);
             this.panelFooter.TabIndex = 0;
@@ -599,7 +599,7 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1924, 601);
+            this.panelMain.Size = new System.Drawing.Size(1924, 589);
             this.panelMain.TabIndex = 1;
             // 
             // txtSearch
@@ -635,7 +635,7 @@
             this.email,
             this.phone});
             this.dgvPlayer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvPlayer.Location = new System.Drawing.Point(0, 107);
+            this.dgvPlayer.Location = new System.Drawing.Point(0, 95);
             this.dgvPlayer.Name = "dgvPlayer";
             this.dgvPlayer.ReadOnly = true;
             this.dgvPlayer.RowHeadersWidth = 51;
@@ -835,9 +835,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 987);
+            this.ClientSize = new System.Drawing.Size(1924, 975);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelFooter);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListPlayer";
             this.Text = "DANH SÁCH CẦU THỦ";

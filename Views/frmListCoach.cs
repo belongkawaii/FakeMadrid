@@ -21,6 +21,8 @@ namespace FakeMadrid.Views
         private void frmListCoach_Load(object sender, EventArgs e)
         {
             loadData();
+            this.WindowState = FormWindowState.Maximized;
+        
         }
         private void loadData()
         {
