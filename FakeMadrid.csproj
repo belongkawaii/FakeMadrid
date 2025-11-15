@@ -83,6 +83,12 @@
     <Compile Include="Views\frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmListCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmListCoach.Designer.cs">
+      <DependentUpon>frmListCoach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmListPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmListCoach.resx">
+      <DependentUpon>frmListCoach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmListPlayer.resx">
       <DependentUpon>frmListPlayer.cs</DependentUpon>
