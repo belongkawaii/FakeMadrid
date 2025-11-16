@@ -83,6 +83,16 @@ namespace FakeMadrid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bannerDangKy {
+            get {
+                object obj = ResourceManager.GetObject("bannerDangKy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bao {
             get {
                 object obj = ResourceManager.GetObject("Bao", resourceCulture);
@@ -136,6 +146,16 @@ namespace FakeMadrid.Properties {
         internal static System.Drawing.Bitmap CEOTinh {
             get {
                 object obj = ResourceManager.GetObject("CEOTinh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChangePass {
+            get {
+                object obj = ResourceManager.GetObject("ChangePass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

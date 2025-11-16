@@ -1,4 +1,5 @@
-﻿using FakeMadrid.Views;
+﻿using FakeMadrid.Controllers;
+using FakeMadrid.Views;
 using FakeMadrid.Views;
 using System;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace FakeMadrid.Views
         public frmDashBoard()
         {
             InitializeComponent();
+            IsMdiContainer = true;
         }
         string infor = "Bạn chưa đăng nhập!";
         public frmDashBoard(string _infor)
@@ -24,9 +26,7 @@ namespace FakeMadrid.Views
             timer1.Enabled = true;
             lblInfor.Text = infor;
 
-            // Mặc định: chưa đăng nhập
-            LogoutToolStripMenuItem.Visible = false;
-            LoginToolStripMenuItem.Visible = true;
+            UpdateMenu();
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,32 +37,76 @@ namespace FakeMadrid.Views
         private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lblInfor.Text = "Bạn chưa đăng nhập!";
-            LogoutToolStripMenuItem.Visible = false;
-            LoginToolStripMenuItem.Visible = true;
+            SessionManager.LoggedLevel = -1;
+            UpdateMenu();
         }
 
         private void LoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
-            login.ShowDialog(); // Dừng lại cho đến khi form login đóng
-
-            if (login.IsLoginSuccess)
+            using (frmLogin login = new frmLogin())
             {
-                lblInfor.Text = $"Xin chào, {login.LoggedUser}!";
-                LogoutToolStripMenuItem.Visible = true;
-                LoginToolStripMenuItem.Visible = false;
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    lblInfor.Text = $"Xin chào, {SessionManager.LoggedUser}!";
+                    UpdateMenu();
+                }
             }
-            else
+
+        }
+
+        private void UpdateMenu()
+        {
+            bool isLogin = SessionManager.IsLoggedIn;
+            LoginToolStripMenuItem.Visible = !isLogin;
+            LogoutToolStripMenuItem.Visible = isLogin;
+            SigninToolStripMenuItem.Visible = !isLogin;
+            ChangePassToolStripMenuItem.Visible = isLogin;
+
+
+            int level = SessionManager.LoggedLevel;
+
+            //Phân quyền
+            if (level == 0)
             {
-                lblInfor.Text = "Bạn chưa đăng nhập!";
+                //Mở full
+                ManageCoachToolStripMenuItem.Visible = true;
+                PlayerManagementToolStripMenuItem.Visible = true;
+                ScheduleToolStripMenuItem.Visible = true;
+                ChangePassToolStripMenuItem.Visible = true;
+            }
+            else if (level == 1) //Coach
+            {
+                ManageCoachToolStripMenuItem.Visible = true;
+                PlayerManagementToolStripMenuItem.Visible = true;
+                ScheduleToolStripMenuItem.Visible = true;
+                ListCoachToolStripMenuItem.Visible = false;
+                ChangePassToolStripMenuItem.Visible = true;
+
+            } 
+            else if (level == 2) //Player
+            {
+                
+                PlayerManagementToolStripMenuItem.Visible = true;
+                ScheduleToolStripMenuItem.Visible = true;
+                ManageCoachToolStripMenuItem.Visible = false;
+                PlayerListToolStripMenuItem.Visible = false;
+                ChangePassToolStripMenuItem.Visible = true;
+            } else if(level == -1)
+            {
+                ManageCoachToolStripMenuItem.Visible = false;
+                PlayerManagementToolStripMenuItem.Visible = false;
+                ScheduleToolStripMenuItem.Visible = false;
                 LogoutToolStripMenuItem.Visible = false;
                 LoginToolStripMenuItem.Visible = true;
+                SigninToolStripMenuItem.Visible = true;
+                ChangePassToolStripMenuItem.Visible = false;
             }
         }
 
         private void listCeoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCEO ceo = new frmCEO();
+            ceo.MdiParent = this;
             ceo.Show();
         }
 
@@ -74,12 +118,68 @@ namespace FakeMadrid.Views
         private void PlayerListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListPlayer frm = new frmListPlayer();
+            //frm.MdiParent = this;
+            //frm.StartPosition = FormStartPosition.CenterParent;
             frm.Show();
         }
 
         private void ListCoachToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListCoach frm = new frmListCoach();
+            //frm.MdiParent = this;
+            //frm.StartPosition = FormStartPosition.CenterParent;
+            frm.Show();
+        }
+
+        private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đĂNGKÝToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSignin frm = new frmSignin();
+            //frm.MdiParent = this;
+            //frm.StartPosition = FormStartPosition.CenterParent;
+            frm.Show();
+        }
+
+        private void TitleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDanhHieu frm = new frmDanhHieu();
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.Show();
+        }
+
+        private void đỔIMẬTKHÂUToolStripMenuItem_Click(object sender, EventArgs e)
+        { 
+
+            using (frmChangePass frm = new frmChangePass())
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    lblInfor.Text = "Bạn chưa đăng nhập!";
+                    SessionManager.LoggedLevel = -1;
+                    UpdateMenu();
+                }
+            }
+        }
+
+        private void ScheduleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void MatchScheduleMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLichThiDau frm = new frmLichThiDau();
+            frm.Show();
+        }
+
+        private void tHỐNGKÊToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThongKe frm = new frmThongKe();
             frm.Show();
         }
     }

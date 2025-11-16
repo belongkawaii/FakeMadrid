@@ -1,4 +1,5 @@
-﻿using FakeMadrid.Database;
+﻿using FakeMadrid.Controllers;
+using FakeMadrid.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,18 +17,90 @@ namespace FakeMadrid.Views
         public frmListPlayer()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+        
         }
 
         private void frmListPlayer_Load(object sender, EventArgs e)
         {
+            int level = SessionManager.LoggedLevel;
+            if(level != 0)
+            {
+                btnThem.Enabled = false;
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+            }
+            // Thêm lựa chọn lọc
+            cbbTrangThai.SelectedIndex = 0;
+
             loadData();
+            
         }
 
         private void loadData()
         {
             DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
-            dgvPlayer.DataSource = db.Players.OrderBy(p => p.player_id);
-            
+
+            string status = cbbTrangThai.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(status) || status == "All")
+            {
+                dgvPlayer.DataSource = db.Players
+                    .OrderBy(p => p.player_id)
+                    .Select(p => new
+                    {
+                        p.player_id,
+                        p.player_name,
+                        p.jersey_number,
+                        p.position,
+                        p.date_of_birth,
+                        p.email,
+                        p.phone,
+                        p.nationality,
+                        p.height,
+                        p.weight,
+                        p.preferred_foot,
+                        p.join_date,
+                        p.contract_end_date,
+                        p.market_value,
+                        p.salary,
+                        p.previous_club,
+                        p.status
+                    })
+                    .ToList();
+            }
+            else
+            {
+                dgvPlayer.DataSource = db.Players
+                    .Where(p => p.status == status)
+                    .OrderBy(p => p.player_id)
+                    .Select(p => new
+                    {
+                        p.player_id,
+                        p.player_name,
+                        p.jersey_number,
+                        p.position,
+                        p.date_of_birth,
+                        p.email,
+                        p.phone,
+                        p.nationality,
+                        p.height,
+                        p.weight,
+                        p.preferred_foot,
+                        p.join_date,
+                        p.contract_end_date,
+                        p.market_value,
+                        p.salary,
+                        p.previous_club,
+                        p.status
+                    })
+                    .ToList();
+            }
+
+            dgvPlayer.Columns["date_of_birth"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvPlayer.Columns["join_date"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvPlayer.Columns["contract_end_date"].DefaultCellStyle.Format = "dd/MM/yyyy";
+
         }
         #region Nút chức năng
 
@@ -37,6 +110,7 @@ namespace FakeMadrid.Views
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
+            
             // 1. Kiểm tra ID
             if (string.IsNullOrWhiteSpace(txtPlayerId.Text))
             {
@@ -236,8 +310,8 @@ namespace FakeMadrid.Views
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            //frmPlayerPrinter frm = new frmPlayerPrinter(); // tạo form in danh sách cầu thủ
-            //frm.Show();
+            frmPlayerPrinter frm = new frmPlayerPrinter(cbbTrangThai.SelectedItem.ToString()); 
+            frm.Show();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -329,7 +403,14 @@ namespace FakeMadrid.Views
 
             }
         }
+
         #endregion
 
+        private void cbbTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+       
     }
 }

@@ -75,6 +75,9 @@ namespace FakeMadrid.Database
     partial void InsertTrophy(Trophy instance);
     partial void UpdateTrophy(Trophy instance);
     partial void DeleteTrophy(Trophy instance);
+    partial void InsertAccount(Account instance);
+    partial void UpdateAccount(Account instance);
+    partial void DeleteAccount(Account instance);
     #endregion
 		
 		public DataClassesQuanLyDoiBongDataContext() : 
@@ -224,6 +227,14 @@ namespace FakeMadrid.Database
 			get
 			{
 				return this.GetTable<Trophy>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Account> Accounts
+		{
+			get
+			{
+				return this.GetTable<Account>();
 			}
 		}
 	}
@@ -5072,6 +5083,271 @@ namespace FakeMadrid.Database
 						this._competition_id = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Competition");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Account")]
+	public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID = default(int);
+		
+		private string _Username;
+		
+		private System.Data.Linq.Binary _Password;
+		
+		private string _Email;
+		
+		private string _OTP;
+		
+		private System.Nullable<System.DateTime> _OTPDateSend;
+		
+		private System.Nullable<System.DateTime> _DateCreated;
+		
+		private System.Nullable<bool> _Active;
+		
+		private System.Nullable<System.DateTime> _DateActive;
+		
+		private System.Nullable<int> _IDLevel;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnUsernameChanging(string value);
+    partial void OnUsernameChanged();
+    partial void OnPasswordChanging(System.Data.Linq.Binary value);
+    partial void OnPasswordChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnOTPChanging(string value);
+    partial void OnOTPChanged();
+    partial void OnOTPDateSendChanging(System.Nullable<System.DateTime> value);
+    partial void OnOTPDateSendChanged();
+    partial void OnDateCreatedChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateCreatedChanged();
+    partial void OnActiveChanging(System.Nullable<bool> value);
+    partial void OnActiveChanged();
+    partial void OnDateActiveChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateActiveChanged();
+    partial void OnIDLevelChanging(System.Nullable<int> value);
+    partial void OnIDLevelChanged();
+    #endregion
+		
+		public Account()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="VarChar(50)")]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this.OnUsernameChanging(value);
+					this.SendPropertyChanging();
+					this._Username = value;
+					this.SendPropertyChanged("Username");
+					this.OnUsernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarBinary(50)", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this.OnPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OTP", DbType="VarChar(50)")]
+		public string OTP
+		{
+			get
+			{
+				return this._OTP;
+			}
+			set
+			{
+				if ((this._OTP != value))
+				{
+					this.OnOTPChanging(value);
+					this.SendPropertyChanging();
+					this._OTP = value;
+					this.SendPropertyChanged("OTP");
+					this.OnOTPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OTPDateSend", DbType="DateTime")]
+		public System.Nullable<System.DateTime> OTPDateSend
+		{
+			get
+			{
+				return this._OTPDateSend;
+			}
+			set
+			{
+				if ((this._OTPDateSend != value))
+				{
+					this.OnOTPDateSendChanging(value);
+					this.SendPropertyChanging();
+					this._OTPDateSend = value;
+					this.SendPropertyChanged("OTPDateSend");
+					this.OnOTPDateSendChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCreated", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DateCreated
+		{
+			get
+			{
+				return this._DateCreated;
+			}
+			set
+			{
+				if ((this._DateCreated != value))
+				{
+					this.OnDateCreatedChanging(value);
+					this.SendPropertyChanging();
+					this._DateCreated = value;
+					this.SendPropertyChanged("DateCreated");
+					this.OnDateCreatedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Active", DbType="Bit")]
+		public System.Nullable<bool> Active
+		{
+			get
+			{
+				return this._Active;
+			}
+			set
+			{
+				if ((this._Active != value))
+				{
+					this.OnActiveChanging(value);
+					this.SendPropertyChanging();
+					this._Active = value;
+					this.SendPropertyChanged("Active");
+					this.OnActiveChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateActive", DbType="Date")]
+		public System.Nullable<System.DateTime> DateActive
+		{
+			get
+			{
+				return this._DateActive;
+			}
+			set
+			{
+				if ((this._DateActive != value))
+				{
+					this.OnDateActiveChanging(value);
+					this.SendPropertyChanging();
+					this._DateActive = value;
+					this.SendPropertyChanged("DateActive");
+					this.OnDateActiveChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLevel", DbType="Int")]
+		public System.Nullable<int> IDLevel
+		{
+			get
+			{
+				return this._IDLevel;
+			}
+			set
+			{
+				if ((this._IDLevel != value))
+				{
+					this.OnIDLevelChanging(value);
+					this.SendPropertyChanging();
+					this._IDLevel = value;
+					this.SendPropertyChanged("IDLevel");
+					this.OnIDLevelChanged();
 				}
 			}
 		}
