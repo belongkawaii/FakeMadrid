@@ -238,6 +238,9 @@
     <EmbeddedResource Include="Views\frmLichThiDau.resx">
       <DependentUpon>frmLichThiDau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmLineup.resx">
+      <DependentUpon>frmLineup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmListCoach.resx">
       <DependentUpon>frmListCoach.cs</DependentUpon>
     </EmbeddedResource>
