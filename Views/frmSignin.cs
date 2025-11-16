@@ -38,24 +38,35 @@ namespace FakeMadrid.Views
             {
                 bool coTen = !string.IsNullOrWhiteSpace(txtUser.Text);
                 bool coPass = !string.IsNullOrWhiteSpace(txtPass.Text);
+                bool coEmail = !string.IsNullOrWhiteSpace(txtEmail.Text);
                 bool coPassCheck = !string.IsNullOrWhiteSpace(txtPassCheck.Text);
-                if (coTen && coPass && coPassCheck) btnSignin.Enabled = true;
+                if (coTen && coPass && coPassCheck && coEmail) btnSignin.Enabled = true;
             };
             txtPass.TextChanged += (s, args) =>
             {
                 bool coTen = !string.IsNullOrWhiteSpace(txtUser.Text);
                 bool coPass = !string.IsNullOrWhiteSpace(txtPass.Text);
+                bool coEmail = !string.IsNullOrWhiteSpace(txtEmail.Text);
                 bool coPassCheck = !string.IsNullOrWhiteSpace(txtPassCheck.Text);
-                if (coTen && coPass && coPassCheck) btnSignin.Enabled = true;
+                if (coTen && coPass && coPassCheck && coEmail) btnSignin.Enabled = true;
+            };
+            txtEmail.TextChanged += (s, args) =>
+            {
+                bool coTen = !string.IsNullOrWhiteSpace(txtUser.Text);
+                bool coPass = !string.IsNullOrWhiteSpace(txtPass.Text);
+                bool coEmail = !string.IsNullOrWhiteSpace(txtEmail.Text);
+                bool coPassCheck = !string.IsNullOrWhiteSpace(txtPassCheck.Text);
+                if (coTen && coPass && coPassCheck && coEmail) btnSignin.Enabled = true;
             };
             txtPassCheck.TextChanged += (s, args) =>
             {
                 bool coTen = !string.IsNullOrWhiteSpace(txtUser.Text);
                 bool coPass = !string.IsNullOrWhiteSpace(txtPass.Text);
+                bool coEmail = !string.IsNullOrWhiteSpace(txtEmail.Text);
                 bool coPassCheck = !string.IsNullOrWhiteSpace(txtPassCheck.Text);
                 if (coPassCheck = !string.IsNullOrWhiteSpace(txtPassCheck.Text)) lblPassCheck.Visible = false;
                 else lblPassCheck.Visible = true;
-                if (coTen && coPass && coPassCheck) btnSignin.Enabled = true;
+                if (coTen && coPass && coPassCheck && coEmail) btnSignin.Enabled = true;
             };
             #endregion
         }
@@ -99,7 +110,7 @@ namespace FakeMadrid.Views
         }
         private void btnSignin_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text == "" || txtPass.Text == "" || txtPassCheck.Text == "")
+            if (txtUser.Text == "" || txtPass.Text == "" || txtEmail.Text == "" || txtPassCheck.Text == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -113,6 +124,7 @@ namespace FakeMadrid.Views
             }
 
             string taikhoan = txtUser.Text;
+            string email = txtEmail.Text;
             string matkhau = txtPass.Text;
             string otp = new Random().Next(1000, 9999).ToString();
 
@@ -126,7 +138,7 @@ namespace FakeMadrid.Views
 
                 Username = taikhoan,
                 Password = hashBytes,
-                Email = "",
+                Email = email,
                 OTP = otp,
                 OTPDateSend = DateTime.Now,
                 DateCreated = DateTime.Now,

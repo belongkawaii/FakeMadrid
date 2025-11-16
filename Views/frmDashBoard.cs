@@ -118,16 +118,13 @@ namespace FakeMadrid.Views
         private void PlayerListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListPlayer frm = new frmListPlayer();
-            //frm.MdiParent = this;
-            //frm.StartPosition = FormStartPosition.CenterParent;
+            
             frm.Show();
         }
 
         private void ListCoachToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListCoach frm = new frmListCoach();
-            //frm.MdiParent = this;
-            //frm.StartPosition = FormStartPosition.CenterParent;
             frm.Show();
         }
 
@@ -139,8 +136,7 @@ namespace FakeMadrid.Views
         private void đĂNGKÝToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmSignin frm = new frmSignin();
-            //frm.MdiParent = this;
-            //frm.StartPosition = FormStartPosition.CenterParent;
+            
             frm.Show();
         }
 
@@ -155,7 +151,7 @@ namespace FakeMadrid.Views
         private void đỔIMẬTKHÂUToolStripMenuItem_Click(object sender, EventArgs e)
         { 
 
-            using (frmChangePass frm = new frmChangePass())
+            using (frmChangePass frm = new frmChangePass(SessionManager.LoggedUser))
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {

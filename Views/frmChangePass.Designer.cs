@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
             this.SeePass = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtNewPass = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imgPass = new System.Windows.Forms.PictureBox();
             this.imgUser = new System.Windows.Forms.PictureBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,9 +59,33 @@
             this.panelLogin.Controls.Add(this.pictureBox1);
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLogin.Location = new System.Drawing.Point(0, 0);
+            this.panelLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(500, 408);
+            this.panelLogin.Size = new System.Drawing.Size(667, 502);
             this.panelLogin.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FakeMadrid.Properties.Resources.ChangePass;
+            this.pictureBox2.Location = new System.Drawing.Point(84, 334);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // txtNewPass
+            // 
+            this.txtNewPass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNewPass.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Location = new System.Drawing.Point(173, 334);
+            this.txtNewPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.PasswordChar = '*';
+            this.txtNewPass.Size = new System.Drawing.Size(327, 35);
+            this.txtNewPass.TabIndex = 9;
             // 
             // SeePass
             // 
@@ -69,10 +93,9 @@
             this.SeePass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SeePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeePass.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SeePass.Location = new System.Drawing.Point(433, 274);
-            this.SeePass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SeePass.Location = new System.Drawing.Point(577, 337);
             this.SeePass.Name = "SeePass";
-            this.SeePass.Size = new System.Drawing.Size(33, 26);
+            this.SeePass.Size = new System.Drawing.Size(41, 31);
             this.SeePass.TabIndex = 8;
             this.SeePass.Text = "🙈";
             this.SeePass.Click += new System.EventHandler(this.SeePass_Click);
@@ -81,62 +104,22 @@
             // 
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(178, 321);
+            this.btnLogin.Location = new System.Drawing.Point(237, 395);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(153, 55);
+            this.btnLogin.Size = new System.Drawing.Size(204, 68);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Xác Nhận";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // txtPass
-            // 
-            this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPass.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(130, 222);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(246, 29);
-            this.txtPass.TabIndex = 2;
-            // 
-            // txtUser
-            // 
-            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUser.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(130, 168);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(246, 29);
-            this.txtUser.TabIndex = 1;
-            // 
-            // txtNewPass
-            // 
-            this.txtNewPass.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewPass.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPass.Location = new System.Drawing.Point(130, 271);
-            this.txtNewPass.Name = "txtNewPass";
-            this.txtNewPass.PasswordChar = '*';
-            this.txtNewPass.Size = new System.Drawing.Size(246, 29);
-            this.txtNewPass.TabIndex = 9;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::FakeMadrid.Properties.Resources.ChangePass;
-            this.pictureBox2.Location = new System.Drawing.Point(63, 271);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
             // imgPass
             // 
             this.imgPass.Image = global::FakeMadrid.Properties.Resources.iconPasss;
-            this.imgPass.Location = new System.Drawing.Point(63, 222);
+            this.imgPass.Location = new System.Drawing.Point(84, 273);
+            this.imgPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgPass.Name = "imgPass";
-            this.imgPass.Size = new System.Drawing.Size(37, 29);
+            this.imgPass.Size = new System.Drawing.Size(49, 36);
             this.imgPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPass.TabIndex = 4;
             this.imgPass.TabStop = false;
@@ -144,12 +127,37 @@
             // imgUser
             // 
             this.imgUser.Image = global::FakeMadrid.Properties.Resources.iconUser;
-            this.imgUser.Location = new System.Drawing.Point(63, 168);
+            this.imgUser.Location = new System.Drawing.Point(84, 207);
+            this.imgUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgUser.Name = "imgUser";
-            this.imgUser.Size = new System.Drawing.Size(37, 29);
+            this.imgUser.Size = new System.Drawing.Size(49, 36);
             this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgUser.TabIndex = 3;
             this.imgUser.TabStop = false;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPass.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(173, 273);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(327, 35);
+            this.txtPass.TabIndex = 2;
+            // 
+            // txtUser
+            // 
+            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUser.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(173, 207);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.ReadOnly = true;
+            this.txtUser.Size = new System.Drawing.Size(327, 35);
+            this.txtUser.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -157,21 +165,24 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::FakeMadrid.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(667, 199);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // frmChangePass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 408);
+            this.ClientSize = new System.Drawing.Size(667, 502);
             this.Controls.Add(this.panelLogin);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmChangePass";
             this.ShowIcon = false;
             this.Text = "Đổi Mật Khẩu";
+            this.Load += new System.EventHandler(this.frmChangePass_Load);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

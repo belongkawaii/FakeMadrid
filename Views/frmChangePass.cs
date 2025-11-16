@@ -16,25 +16,36 @@ namespace FakeMadrid.Views
 {
     public partial class frmChangePass : Form
     {
+        private string _Taikhoan;
+        
+        public string Taikhoan
+        {
+            get { return _Taikhoan; }
+            set { _Taikhoan = value; }
+        }
+
         private bool _isShowing;
         public bool isShowing
         {
             get { return _isShowing; }
             set { _isShowing = value; }
         }
-        public frmChangePass()
+        public frmChangePass(string username)
         {
             InitializeComponent();
             isShowing = false;
+            Taikhoan = username;
         }
+
+        
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string user = txtUser.Text.Trim();
+
             string pass = txtPass.Text;
             string newPass = txtNewPass.Text;
             DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
-            Account nd = db.Accounts.SingleOrDefault(p => p.Username == user);
+            Account nd = db.Accounts.SingleOrDefault(p => p.Username == Taikhoan);
             //Account mknd = db.Accounts.SingleOrDefault(p => p.Password == pass);
             if (nd != null)
             {
@@ -98,6 +109,11 @@ namespace FakeMadrid.Views
                 SeePass.Text = "👁";
                 isShowing = true;
             }
+        }
+
+        private void frmChangePass_Load(object sender, EventArgs e)
+        {
+            txtUser.Text = Taikhoan;
         }
     }
 }

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panelLogin = new System.Windows.Forms.Panel();
             this.SeePass = new System.Windows.Forms.Label();
-            this.lblChuaTK = new System.Windows.Forms.LinkLabel();
             this.lblForgetPass = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.imgPass = new System.Windows.Forms.PictureBox();
@@ -50,7 +49,6 @@
             // 
             this.panelLogin.BackColor = System.Drawing.Color.White;
             this.panelLogin.Controls.Add(this.SeePass);
-            this.panelLogin.Controls.Add(this.lblChuaTK);
             this.panelLogin.Controls.Add(this.lblForgetPass);
             this.panelLogin.Controls.Add(this.btnLogin);
             this.panelLogin.Controls.Add(this.imgPass);
@@ -78,24 +76,10 @@
             this.SeePass.Text = "🙈";
             this.SeePass.Click += new System.EventHandler(this.SeePass_Click);
             // 
-            // lblChuaTK
-            // 
-            this.lblChuaTK.AutoSize = true;
-            this.lblChuaTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChuaTK.LinkColor = System.Drawing.Color.Black;
-            this.lblChuaTK.Location = new System.Drawing.Point(136, 520);
-            this.lblChuaTK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblChuaTK.Name = "lblChuaTK";
-            this.lblChuaTK.Size = new System.Drawing.Size(157, 17);
-            this.lblChuaTK.TabIndex = 7;
-            this.lblChuaTK.TabStop = true;
-            this.lblChuaTK.Text = "Bạn chưa có tài khoản?";
-            this.lblChuaTK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
             // lblForgetPass
             // 
             this.lblForgetPass.AutoSize = true;
-            this.lblForgetPass.Location = new System.Drawing.Point(292, 460);
+            this.lblForgetPass.Location = new System.Drawing.Point(169, 515);
             this.lblForgetPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblForgetPass.Name = "lblForgetPass";
             this.lblForgetPass.Size = new System.Drawing.Size(103, 16);
@@ -220,7 +204,6 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.PictureBox imgPass;
         private System.Windows.Forms.PictureBox imgUser;
-        private System.Windows.Forms.LinkLabel lblChuaTK;
         private System.Windows.Forms.LinkLabel lblForgetPass;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label SeePass;

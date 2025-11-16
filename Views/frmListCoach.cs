@@ -138,7 +138,7 @@ namespace FakeMadrid.Views
             Coach coach = db.Coaches.Where(p => p.coach_id == coachId).SingleOrDefault();
             if (coach != null)
             {
-                MessageBox.Show("Mã cầu thủ đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mã HLV đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtCoachId.Focus();
                 return;
             }
@@ -242,7 +242,7 @@ namespace FakeMadrid.Views
 
             if (coach == null)
             {
-                MessageBox.Show("Mã cầu thủ không tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mã HLV không tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtCoachId.Focus();
                 return;
             }
@@ -261,7 +261,7 @@ namespace FakeMadrid.Views
 
 
                 loadData(); // load lại DataGridView
-                MessageBox.Show("Xóa cầu thủ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa HLV thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

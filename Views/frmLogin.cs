@@ -58,13 +58,9 @@ namespace FakeMadrid.Views
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            frmForgetPass forgetPass = new frmForgetPass();
+            forgetPass.ShowDialog();
 
-        }
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmSignin frm = new frmSignin();
-            frm.Show();
-            this.Close();
         }
         public bool IsLoginSuccess = false;
         public string LoggedUser = "";
