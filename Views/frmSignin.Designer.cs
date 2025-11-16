@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignin));
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SeePass = new System.Windows.Forms.Label();
             this.lblPassCheck = new System.Windows.Forms.Label();
             this.txtPassCheck = new System.Windows.Forms.TextBox();
             this.btnSignin = new System.Windows.Forms.Button();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imgPass = new System.Windows.Forms.PictureBox();
             this.imgUser = new System.Windows.Forms.PictureBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPicture = new System.Windows.Forms.Panel();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPass)).BeginInit();
@@ -68,6 +69,28 @@
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(423, 567);
             this.panelLogin.TabIndex = 3;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(79, 293);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(327, 35);
+            this.txtEmail.TabIndex = 11;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FakeMadrid.Properties.Resources.Email;
+            this.pictureBox2.Location = new System.Drawing.Point(21, 293);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // SeePass
             // 
@@ -115,6 +138,28 @@
             this.btnSignin.UseVisualStyleBackColor = true;
             this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
             // 
+            // imgPass
+            // 
+            this.imgPass.Image = global::FakeMadrid.Properties.Resources.iconPasss;
+            this.imgPass.Location = new System.Drawing.Point(21, 352);
+            this.imgPass.Margin = new System.Windows.Forms.Padding(4);
+            this.imgPass.Name = "imgPass";
+            this.imgPass.Size = new System.Drawing.Size(49, 36);
+            this.imgPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgPass.TabIndex = 4;
+            this.imgPass.TabStop = false;
+            // 
+            // imgUser
+            // 
+            this.imgUser.Image = global::FakeMadrid.Properties.Resources.iconUser;
+            this.imgUser.Location = new System.Drawing.Point(21, 232);
+            this.imgUser.Margin = new System.Windows.Forms.Padding(4);
+            this.imgUser.Name = "imgUser";
+            this.imgUser.Size = new System.Drawing.Size(49, 36);
+            this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgUser.TabIndex = 3;
+            this.imgUser.TabStop = false;
+            // 
             // txtPass
             // 
             this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -137,39 +182,6 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(327, 35);
             this.txtUser.TabIndex = 1;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::FakeMadrid.Properties.Resources.Email;
-            this.pictureBox2.Location = new System.Drawing.Point(21, 293);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // imgPass
-            // 
-            this.imgPass.Image = global::FakeMadrid.Properties.Resources.iconPasss;
-            this.imgPass.Location = new System.Drawing.Point(21, 352);
-            this.imgPass.Margin = new System.Windows.Forms.Padding(4);
-            this.imgPass.Name = "imgPass";
-            this.imgPass.Size = new System.Drawing.Size(49, 36);
-            this.imgPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgPass.TabIndex = 4;
-            this.imgPass.TabStop = false;
-            // 
-            // imgUser
-            // 
-            this.imgUser.Image = global::FakeMadrid.Properties.Resources.iconUser;
-            this.imgUser.Location = new System.Drawing.Point(21, 232);
-            this.imgUser.Margin = new System.Windows.Forms.Padding(4);
-            this.imgUser.Name = "imgUser";
-            this.imgUser.Size = new System.Drawing.Size(49, 36);
-            this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgUser.TabIndex = 3;
-            this.imgUser.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -195,17 +207,6 @@
             this.panelPicture.Size = new System.Drawing.Size(624, 567);
             this.panelPicture.TabIndex = 2;
             // 
-            // txtEmail
-            // 
-            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(79, 293);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(327, 35);
-            this.txtEmail.TabIndex = 11;
-            // 
             // frmSignin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -213,6 +214,7 @@
             this.ClientSize = new System.Drawing.Size(1045, 567);
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.panelPicture);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSignin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

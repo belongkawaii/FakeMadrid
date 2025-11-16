@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmForgetPass));
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.SeePass = new System.Windows.Forms.Label();
             this.btnCommit = new System.Windows.Forms.Button();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imgUser = new System.Windows.Forms.PictureBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLogin
@@ -63,6 +64,39 @@
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(667, 502);
             this.panelLogin.TabIndex = 4;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(173, 262);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(327, 35);
+            this.txtEmail.TabIndex = 13;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::FakeMadrid.Properties.Resources.Email;
+            this.pictureBox3.Location = new System.Drawing.Point(84, 262);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(49, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FakeMadrid.Properties.Resources.ChangePass;
+            this.pictureBox2.Location = new System.Drawing.Point(84, 321);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // txtPass
             // 
@@ -102,28 +136,6 @@
             this.btnCommit.UseVisualStyleBackColor = true;
             this.btnCommit.Click += new System.EventHandler(this.btnCommit_Click);
             // 
-            // txtUser
-            // 
-            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUser.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(173, 207);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(327, 35);
-            this.txtUser.TabIndex = 1;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::FakeMadrid.Properties.Resources.ChangePass;
-            this.pictureBox2.Location = new System.Drawing.Point(84, 321);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
             // imgUser
             // 
             this.imgUser.Image = global::FakeMadrid.Properties.Resources.iconUser;
@@ -134,6 +146,17 @@
             this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgUser.TabIndex = 3;
             this.imgUser.TabStop = false;
+            // 
+            // txtUser
+            // 
+            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUser.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(173, 207);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(327, 35);
+            this.txtUser.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -148,43 +171,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // txtEmail
-            // 
-            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(173, 262);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(327, 35);
-            this.txtEmail.TabIndex = 13;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::FakeMadrid.Properties.Resources.Email;
-            this.pictureBox3.Location = new System.Drawing.Point(84, 262);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(49, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            // 
             // frmForgetPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 502);
             this.Controls.Add(this.panelLogin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmForgetPass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quên Mật Khẩu";
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
