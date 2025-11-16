@@ -76,14 +76,14 @@ namespace FakeMadrid.Views
             string pass = txtPass.Text;
             DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
             Account nd = db.Accounts.SingleOrDefault(p => p.Username == user);
-            
-            if(nd != null)
+            //Account mknd = db.Accounts.SingleOrDefault(p => p.Password == pass);
+            if (nd != null)
             {
                 //Kiểm tra mật khẩu đang lưu trữ trong db
                 MD5 md5 = MD5.Create();
                 byte[] inputBytes = Encoding.UTF8.GetBytes(pass + nd.OTP);
                 byte[] hashBytes = md5.ComputeHash(inputBytes);
-                if(nd.Password == hashBytes)
+                if (nd.Password == hashBytes)
                 {
                     // Lưu vào session
                     SessionManager.LoggedUser = nd.Username;
@@ -93,21 +93,33 @@ namespace FakeMadrid.Views
                     this.Close();
                     return;
                 }
+                else
+                {
+                    iCount++;
+                    if (iCount >= 3)
+                    {
+                        MessageBox.Show("Bạn đã nhập sai quá nhiều lần.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        this.Close();
+                        return;
+                    }
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.Số lần nhập còn lại " + (3 - iCount), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lblForgetPass.Visible = true;
+                }
             }
-            
             else
             {
                 iCount++;
                 if (iCount >= 3)
                 {
                     MessageBox.Show("Bạn đã nhập sai quá nhiều lần.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    btnLogin.Enabled = false;
+                    this.Close();
                     return;
                 }
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.Số lần nhập còn lại "+(3 - iCount), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.Số lần nhập còn lại " + (3 - iCount), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lblForgetPass.Visible = true;
             }
-            
+
+
         }
 
         private void SeePass_Click(object sender, EventArgs e)

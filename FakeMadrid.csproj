@@ -98,6 +98,12 @@
     <Compile Include="Views\frmCEOInfor.Designer.cs">
       <DependentUpon>frmCEOInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmChangePass.Designer.cs">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmCoachPrinter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmCEOInfor.resx">
       <DependentUpon>frmCEOInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmChangePass.resx">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmCoachPrinter.resx">
       <DependentUpon>frmCoachPrinter.cs</DependentUpon>
@@ -255,6 +264,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\frmLogin\ChangePass.png" />
     <Content Include="Resources\frmSignin\bannerDangKy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

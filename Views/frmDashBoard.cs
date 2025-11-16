@@ -39,8 +39,6 @@ namespace FakeMadrid.Views
             lblInfor.Text = "Bạn chưa đăng nhập!";
             SessionManager.LoggedLevel = -1;
             UpdateMenu();
-
-
         }
 
         private void LoginToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,6 +60,8 @@ namespace FakeMadrid.Views
             LoginToolStripMenuItem.Visible = !isLogin;
             LogoutToolStripMenuItem.Visible = isLogin;
             SigninToolStripMenuItem.Visible = !isLogin;
+            ChangePassToolStripMenuItem.Visible = isLogin;
+
 
             int level = SessionManager.LoggedLevel;
 
@@ -72,21 +72,25 @@ namespace FakeMadrid.Views
                 ManageCoachToolStripMenuItem.Visible = true;
                 PlayerManagementToolStripMenuItem.Visible = true;
                 ScheduleToolStripMenuItem.Visible = true;
-            } else if (level == 1) //Coach
+                ChangePassToolStripMenuItem.Visible = true;
+            }
+            else if (level == 1) //Coach
             {
                 ManageCoachToolStripMenuItem.Visible = true;
                 PlayerManagementToolStripMenuItem.Visible = true;
                 ScheduleToolStripMenuItem.Visible = true;
                 ListCoachToolStripMenuItem.Visible = false;
+                ChangePassToolStripMenuItem.Visible = true;
 
-
-            } else if (level == 2) //Player
+            } 
+            else if (level == 2) //Player
             {
                 
                 PlayerManagementToolStripMenuItem.Visible = true;
                 ScheduleToolStripMenuItem.Visible = true;
                 ManageCoachToolStripMenuItem.Visible = false;
                 PlayerListToolStripMenuItem.Visible = false;
+                ChangePassToolStripMenuItem.Visible = true;
             } else if(level == -1)
             {
                 ManageCoachToolStripMenuItem.Visible = false;
@@ -94,14 +98,15 @@ namespace FakeMadrid.Views
                 ScheduleToolStripMenuItem.Visible = false;
                 LogoutToolStripMenuItem.Visible = false;
                 LoginToolStripMenuItem.Visible = true;
+                SigninToolStripMenuItem.Visible = true;
+                ChangePassToolStripMenuItem.Visible = false;
             }
         }
 
         private void listCeoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCEO ceo = new frmCEO();
-            MdiParent = this;
-            ceo.StartPosition = FormStartPosition.CenterParent;
+            ceo.MdiParent = this;
             ceo.Show();
         }
 
@@ -134,8 +139,8 @@ namespace FakeMadrid.Views
         private void đĂNGKÝToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmSignin frm = new frmSignin();
-            frm.MdiParent = this;
-            frm.StartPosition = FormStartPosition.CenterParent;
+            //frm.MdiParent = this;
+            //frm.StartPosition = FormStartPosition.CenterParent;
             frm.Show();
         }
 
@@ -145,6 +150,20 @@ namespace FakeMadrid.Views
             frm.MdiParent = this;
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.Show();
+        }
+
+        private void đỔIMẬTKHÂUToolStripMenuItem_Click(object sender, EventArgs e)
+        { 
+
+            using (frmChangePass frm = new frmChangePass())
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    lblInfor.Text = "Bạn chưa đăng nhập!";
+                    SessionManager.LoggedLevel = -1;
+                    UpdateMenu();
+                }
+            }
         }
     }
 }

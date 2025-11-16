@@ -123,6 +123,7 @@ namespace FakeMadrid.Views
             DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
             Account nd = new Account
             {
+
                 Username = taikhoan,
                 Password = hashBytes,
                 Email = "",
