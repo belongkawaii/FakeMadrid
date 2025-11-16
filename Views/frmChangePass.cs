@@ -33,8 +33,8 @@ namespace FakeMadrid.Views
         public frmChangePass(string username)
         {
             InitializeComponent();
-            isShowing = false;
-            Taikhoan = username;
+            //isShowing = false;
+            //Taikhoan = username;
         }
 
         

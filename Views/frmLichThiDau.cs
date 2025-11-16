@@ -15,9 +15,9 @@ namespace FakeMadrid.Views
         public frmLichThiDau()
         {
             InitializeComponent();
-            this.Size = new Size(940, 600);
-            this.MinimumSize = new Size(940, 600);
-            this.StartPosition = FormStartPosition.CenterScreen;
+            //this.Size = new Size(940, 600);
+            //this.MinimumSize = new Size(940, 600);
+            //this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void frmLichThiDau_Load(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace FakeMadrid.Views
         public frmDashBoard()
         {
             InitializeComponent();
-            IsMdiContainer = true;
+            
         }
         string infor = "Bạn chưa đăng nhập!";
         public frmDashBoard(string _infor)
@@ -112,7 +112,7 @@ namespace FakeMadrid.Views
         private void listCeoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCEO ceo = new frmCEO();
-            ceo.MdiParent = this;
+            //ceo.MdiParent = this;
             ceo.Show();
         }
 
@@ -149,7 +149,7 @@ namespace FakeMadrid.Views
         private void TitleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDanhHieu frm = new frmDanhHieu();
-            frm.MdiParent = this;
+            //frm.MdiParent = this;
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.Show();
         }

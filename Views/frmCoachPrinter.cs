@@ -20,6 +20,7 @@ namespace FakeMadrid.Views
         {
             InitializeComponent();
         }
+
         string Role;
 
         public frmCoachPrinter(string _Role)

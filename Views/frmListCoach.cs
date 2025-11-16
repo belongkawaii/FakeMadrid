@@ -16,7 +16,7 @@ namespace FakeMadrid.Views
         public frmListCoach()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void frmListCoach_Load(object sender, EventArgs e)

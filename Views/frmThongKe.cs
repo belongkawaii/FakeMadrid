@@ -12,7 +12,7 @@ namespace FakeMadrid
         public frmThongKe()
         {
             InitializeComponent();
-            this.Load += frmThongKe_Load;
+            //this.Load += frmThongKe_Load;
         }
 
         private bool IsDesignMode()

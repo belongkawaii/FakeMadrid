@@ -19,7 +19,7 @@ namespace FakeMadrid.Views
         public frmForgetPass()
         {
             InitializeComponent();
-            isShowing = false;
+            //isShowing = false;
         }
 
       

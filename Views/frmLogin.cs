@@ -72,9 +72,19 @@ namespace FakeMadrid.Views
             string pass = txtPass.Text;
             DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
             Account nd = db.Accounts.SingleOrDefault(p => p.Username == user);
-            //Account mknd = db.Accounts.SingleOrDefault(p => p.Password == pass);
+            
+
             if (nd != null)
             {
+                //Kiểm tra trạng thái Active chưa => Nhập dữ liệu mã OTP
+                if (nd.Active == false) //Chưa Active
+                {
+                    MessageBox.Show("Tài khoản chưa xác thực. Vui lòng nhập OTP để xác thực!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    frmXacThuc frm = new frmXacThuc(nd.Username);
+                    frm.Show();
+                    return;
+                }
+
                 //Kiểm tra mật khẩu đang lưu trữ trong db
                 MD5 md5 = MD5.Create();
                 byte[] inputBytes = Encoding.UTF8.GetBytes(pass + nd.OTP);

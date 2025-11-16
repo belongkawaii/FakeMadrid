@@ -39,7 +39,7 @@
             // imgCEO
             // 
             this.imgCEO.Location = new System.Drawing.Point(30, 128);
-            this.imgCEO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgCEO.Margin = new System.Windows.Forms.Padding(4);
             this.imgCEO.Name = "imgCEO";
             this.imgCEO.Size = new System.Drawing.Size(200, 246);
             this.imgCEO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -51,7 +51,7 @@
             this.panelText.BackColor = System.Drawing.Color.White;
             this.panelText.Controls.Add(this.lblText);
             this.panelText.Location = new System.Drawing.Point(279, 128);
-            this.panelText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelText.Margin = new System.Windows.Forms.Padding(4);
             this.panelText.Name = "panelText";
             this.panelText.Size = new System.Drawing.Size(667, 246);
             this.panelText.TabIndex = 1;
@@ -93,7 +93,7 @@
             this.Controls.Add(this.imgCEO);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCEOInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCEOInfor";

@@ -1,4 +1,5 @@
-﻿using FakeMadrid.Database;
+﻿using FakeMadrid.Controllers;
+using FakeMadrid.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,8 +27,9 @@ namespace FakeMadrid.Views
         public frmSignin()
         {
             InitializeComponent();
-            bool isShowing = false;
+            //bool isShowing = false;
         }
+
 
         private void frmSignin_Load(object sender, EventArgs e)
         {
@@ -146,6 +148,7 @@ namespace FakeMadrid.Views
                 Username = taikhoan,
                 Password = hashBytes,
                 Email = email,
+                RandomKey = otp,
                 OTP = otp,
                 OTPDateSend = DateTime.Now,
                 DateCreated = DateTime.Now,
@@ -158,6 +161,15 @@ namespace FakeMadrid.Views
             db.SubmitChanges();
 
             MessageBox.Show("Tạo tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //Gửi email xác thực 
+            SendMail.sendMailTo(nd.Email, "Mã OTP xác thực là: " + nd.OTP);
+            nd.OTPDateSend = DateTime.Now; //Kiểm soát thời gian hiệu lực 3 phút
+            db.SubmitChanges();
+
+            frmXacThuc frm = new frmXacThuc(nd.Username);
+            frm.Show();
+
             this.Close();
         }
 

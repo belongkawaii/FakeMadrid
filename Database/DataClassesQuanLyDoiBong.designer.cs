@@ -5114,13 +5114,15 @@ namespace FakeMadrid.Database
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _ID = default(int);
+		private int _ID;
 		
 		private string _Username;
 		
 		private System.Data.Linq.Binary _Password;
 		
 		private string _Email;
+		
+		private string _RandomKey;
 		
 		private string _OTP;
 		
@@ -5132,18 +5134,22 @@ namespace FakeMadrid.Database
 		
 		private System.Nullable<System.DateTime> _DateActive;
 		
-		private System.Nullable<int> _IDLevel;
+		private int _IDLevel;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
     partial void OnUsernameChanging(string value);
     partial void OnUsernameChanged();
     partial void OnPasswordChanging(System.Data.Linq.Binary value);
     partial void OnPasswordChanged();
     partial void OnEmailChanging(string value);
     partial void OnEmailChanged();
+    partial void OnRandomKeyChanging(string value);
+    partial void OnRandomKeyChanged();
     partial void OnOTPChanging(string value);
     partial void OnOTPChanged();
     partial void OnOTPDateSendChanging(System.Nullable<System.DateTime> value);
@@ -5154,7 +5160,7 @@ namespace FakeMadrid.Database
     partial void OnActiveChanged();
     partial void OnDateActiveChanging(System.Nullable<System.DateTime> value);
     partial void OnDateActiveChanged();
-    partial void OnIDLevelChanging(System.Nullable<int> value);
+    partial void OnIDLevelChanging(int value);
     partial void OnIDLevelChanged();
     #endregion
 		
@@ -5163,12 +5169,23 @@ namespace FakeMadrid.Database
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID
 		{
 			get
 			{
 				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
 			}
 		}
 		
@@ -5192,7 +5209,7 @@ namespace FakeMadrid.Database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarBinary(50)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary Password
 		{
 			get
@@ -5228,6 +5245,26 @@ namespace FakeMadrid.Database
 					this._Email = value;
 					this.SendPropertyChanged("Email");
 					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RandomKey", DbType="VarChar(50)")]
+		public string RandomKey
+		{
+			get
+			{
+				return this._RandomKey;
+			}
+			set
+			{
+				if ((this._RandomKey != value))
+				{
+					this.OnRandomKeyChanging(value);
+					this.SendPropertyChanging();
+					this._RandomKey = value;
+					this.SendPropertyChanged("RandomKey");
+					this.OnRandomKeyChanged();
 				}
 			}
 		}
@@ -5332,8 +5369,8 @@ namespace FakeMadrid.Database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLevel", DbType="Int")]
-		public System.Nullable<int> IDLevel
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLevel", DbType="Int NOT NULL")]
+		public int IDLevel
 		{
 			get
 			{

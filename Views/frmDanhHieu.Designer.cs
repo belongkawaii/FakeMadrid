@@ -112,7 +112,7 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1065, 519);
             this.flowLayoutPanel2.TabIndex = 3;
-            this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
+//            this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
             // panel1
             // 
@@ -142,7 +142,7 @@
             this.label2.Size = new System.Drawing.Size(122, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "11 December 2000.";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -153,7 +153,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "The Best Club of the 20th Century FIFA Trophy";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel3
             // 
@@ -379,7 +379,7 @@
             this.label14.Size = new System.Drawing.Size(64, 69);
             this.label14.TabIndex = 2;
             this.label14.Text = "2";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            //this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label13
             // 
@@ -458,7 +458,7 @@
             this.label15.Size = new System.Drawing.Size(113, 29);
             this.label15.TabIndex = 0;
             this.label15.Text = "Leagues";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+            //this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // panel18
             // 
