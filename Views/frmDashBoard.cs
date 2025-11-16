@@ -165,5 +165,22 @@ namespace FakeMadrid.Views
                 }
             }
         }
+
+        private void ScheduleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void MatchScheduleMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLichThiDau frm = new frmLichThiDau();
+            frm.Show();
+        }
+
+        private void tHỐNGKÊToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThongKe frm = new frmThongKe();
+            frm.Show();
+        }
     }
 }
