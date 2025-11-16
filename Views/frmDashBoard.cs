@@ -73,6 +73,8 @@ namespace FakeMadrid.Views
                 PlayerManagementToolStripMenuItem.Visible = true;
                 ScheduleToolStripMenuItem.Visible = true;
                 ChangePassToolStripMenuItem.Visible = true;
+                tHỐNGKÊToolStripMenuItem.Visible = true;
+                
             }
             else if (level == 1) //Coach
             {
@@ -81,6 +83,7 @@ namespace FakeMadrid.Views
                 ScheduleToolStripMenuItem.Visible = true;
                 ListCoachToolStripMenuItem.Visible = false;
                 ChangePassToolStripMenuItem.Visible = true;
+                tHỐNGKÊToolStripMenuItem.Visible = false;
 
             } 
             else if (level == 2) //Player
@@ -91,6 +94,8 @@ namespace FakeMadrid.Views
                 ManageCoachToolStripMenuItem.Visible = false;
                 PlayerListToolStripMenuItem.Visible = false;
                 ChangePassToolStripMenuItem.Visible = true;
+                tHỐNGKÊToolStripMenuItem.Visible = false;
+
             } else if(level == -1)
             {
                 ManageCoachToolStripMenuItem.Visible = false;
@@ -100,6 +105,7 @@ namespace FakeMadrid.Views
                 LoginToolStripMenuItem.Visible = true;
                 SigninToolStripMenuItem.Visible = true;
                 ChangePassToolStripMenuItem.Visible = false;
+                tHỐNGKÊToolStripMenuItem.Visible = false;
             }
         }
 

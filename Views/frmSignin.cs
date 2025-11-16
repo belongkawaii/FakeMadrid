@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -110,6 +111,7 @@ namespace FakeMadrid.Views
         }
         private void btnSignin_Click(object sender, EventArgs e)
         {
+
             if (txtUser.Text == "" || txtPass.Text == "" || txtEmail.Text == "" || txtPassCheck.Text == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -120,6 +122,11 @@ namespace FakeMadrid.Views
             {
                 lblPassCheck.Visible = true;
                 MessageBox.Show("Mật khẩu xác nhận không khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (KiemTraEmail(txtEmail.Text) == false)
+            {
+                MessageBox.Show("Email không hợp lệ");
                 return;
             }
 
@@ -152,6 +159,12 @@ namespace FakeMadrid.Views
 
             MessageBox.Show("Tạo tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+        }
+
+        public bool KiemTraEmail(string email)
+        {
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
         }
         #endregion
 
