@@ -73,6 +73,16 @@ namespace FakeMadrid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Arda {
+            get {
+                object obj = ResourceManager.GetObject("Arda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BackgoundCEO {
             get {
                 object obj = ResourceManager.GetObject("BackgoundCEO", resourceCulture);
@@ -203,6 +213,16 @@ namespace FakeMadrid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Line_up {
+            get {
+                object obj = ResourceManager.GetObject("Line-up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo {
             get {
                 object obj = ResourceManager.GetObject("Logo", resourceCulture);
@@ -216,6 +236,26 @@ namespace FakeMadrid.Properties {
         internal static System.Drawing.Bitmap Long {
             get {
                 object obj = ResourceManager.GetObject("Long", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NFL {
+            get {
+                object obj = ResourceManager.GetObject("NFL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vini {
+            get {
+                object obj = ResourceManager.GetObject("Vini", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

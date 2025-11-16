@@ -12,6 +12,15 @@ namespace FakeMadrid.Views
         {
             InitializeComponent();
             IsMdiContainer = true;
+            #region Click
+
+            GNpic1_Click.Click += GNpic1_Click_Event;
+            GNpic2_Click.Click += GNpic2_Click_Event;
+            GNpic3_Click.Click += GNpic3_Click_Event;
+            GNpic4_Click.Click += GNpic4_Click_Event;
+
+
+            #endregion
         }
         string infor = "Bạn chưa đăng nhập!";
         public frmDashBoard(string _infor)
@@ -103,6 +112,7 @@ namespace FakeMadrid.Views
             }
         }
 
+
         private void listCeoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCEO ceo = new frmCEO();
@@ -162,6 +172,30 @@ namespace FakeMadrid.Views
             }
         }
 
+        private void GNpic1_Click_Event(object sender, EventArgs e)
+        {
+            frmLineup frmlineup = new frmLineup();
+            frmlineup.Show();
+        }
+
+        private void GNpic2_Click_Event(object sender, EventArgs e)
+        {
+            frmArda frmadra = new frmArda();
+            frmadra.Show();
+        }   
+
+        private void GNpic3_Click_Event(object sender, EventArgs e)
+        {
+            frmNFL frmnfl = new frmNFL();
+            frmnfl.Show();
+        }  
+
+        private void GNpic4_Click_Event(object sender, EventArgs e)
+        {
+            frmVini frmvini = new frmVini();
+            frmvini.Show();
+        }
+
         private void ScheduleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
@@ -177,6 +211,36 @@ namespace FakeMadrid.Views
         {
             frmThongKe frm = new frmThongKe();
             frm.Show();
+        }
+
+        private void PlayerManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1Click_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void mStripToolBox_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
