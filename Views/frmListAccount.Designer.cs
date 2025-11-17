@@ -139,6 +139,7 @@
             this.btnIn.TabIndex = 4;
             this.btnIn.Text = "In danh sách";
             this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnSua
             // 
@@ -571,7 +572,7 @@
             this.Controls.Add(this.panelFooter);
             this.Controls.Add(this.panelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListAccount";
             this.Text = "frmListAccount";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

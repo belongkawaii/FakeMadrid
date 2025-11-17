@@ -126,6 +126,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyBongDaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyBongDaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyBongDaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmAccountPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmAccountPrinter.Designer.cs">
+      <DependentUpon>frmAccountPrinter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmArda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,8 +273,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportAccount.rdlc" />
     <EmbeddedResource Include="ReportCoach.rdlc" />
     <EmbeddedResource Include="ReportPlayer.rdlc" />
+    <EmbeddedResource Include="Views\frmAccountPrinter.resx">
+      <DependentUpon>frmAccountPrinter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmArda.resx">
       <DependentUpon>frmArda.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,6 +378,17 @@
     </None>
     <None Include="QuanLyBongDaDataSet.xss">
       <DependentUpon>QuanLyBongDaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyBongDaDataSet1.xsc">
+      <DependentUpon>QuanLyBongDaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyBongDaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyBongDaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyBongDaDataSet1.xss">
+      <DependentUpon>QuanLyBongDaDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Resources\frmLogin\ImageSanNha.jpg" />
   </ItemGroup>

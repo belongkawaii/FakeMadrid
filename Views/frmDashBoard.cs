@@ -82,7 +82,7 @@ namespace FakeMadrid.Views
                 ManageCoachToolStripMenuItem.Visible = true;
                 CoachContractToolStripMenuItem.Visible = false;
                 
-                ScheduleToolStripMenuItem.Visible = true;
+                
                 
 
                 lblInfor.Text = $"Xin chào CEO, {SessionManager.LoggedUser}!";
@@ -103,7 +103,7 @@ namespace FakeMadrid.Views
                 ListCoachToolStripMenuItem.Visible = true;               
                 CoachContractToolStripMenuItem.Visible = true;
 
-                ScheduleToolStripMenuItem.Visible = true;
+               
                 lblInfor.Text = $"Xin chào Coach, {SessionManager.LoggedUser}!";
             }
             // player
@@ -122,7 +122,7 @@ namespace FakeMadrid.Views
                 ListCoachToolStripMenuItem.Visible = true;
                 CoachContractToolStripMenuItem.Visible = false;
 
-                ScheduleToolStripMenuItem.Visible = true;
+                
                 lblInfor.Text = $"Xin chào Player, {SessionManager.LoggedUser}!";
             }
             // viewer
@@ -141,7 +141,7 @@ namespace FakeMadrid.Views
                 ListCoachToolStripMenuItem.Visible = true;
                 CoachContractToolStripMenuItem.Visible = false;
 
-                ScheduleToolStripMenuItem.Visible = true;
+                
                 lblInfor.Text = $"Xin chào , {SessionManager.LoggedUser}!";
             }
             // not logged in
@@ -150,7 +150,7 @@ namespace FakeMadrid.Views
                 CategoryToolStripMenuItem.Visible = false;
                 PlayerManagementToolStripMenuItem.Visible = false;
                 ManageCoachToolStripMenuItem.Visible = false;
-                ScheduleToolStripMenuItem.Visible = false;
+                
                 HelpToolStripMenuItem.Visible = true;
                 LogoutToolStripMenuItem.Visible = false;
                 LoginToolStripMenuItem.Visible = true;
