@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FakeMadrid.Database;
 
 namespace FakeMadrid.Views
 {
@@ -15,6 +16,18 @@ namespace FakeMadrid.Views
         public frmChiTietTranDau()
         {
             InitializeComponent();
+        }
+
+        public frmChiTietTranDau(List<(int MatchID, string MatchDate, string HomeTeam, string HomeScore, string AwayTeam, string AwayScore, string Referee, bool? IsHomeMatch)> arg)
+        {
+            InitializeComponent();
+            
+        }
+
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

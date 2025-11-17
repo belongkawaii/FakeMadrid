@@ -123,10 +123,28 @@ namespace FakeMadrid.Views
             if (lstMatch.SelectedItems.Count > 0)
             {
                 var item = lstMatch.SelectedItems[0];
-                var match = db.Matches.Where(m => m.match_id == item.Index + 1);
-                frmChiTietTranDau detailForm = new frmChiTietTranDau();
+                var match = db.Matches
+                    .Join(db.Teams,
+                        m => m.home_team_id,
+                        t => t.team_id,
+                        (m, homeTeam) => new { m, homeTeam })
+                    .Join(db.Teams,
+                        x => x.m.away_team_id,
+                        t => t.team_id,
+                        (x, awayTeam) => new {
+                            x.m.match_id,
+                            MatchDate = x.m.match_date.ToString("dd/MM/yyyy"),
+                            HomeTeam = x.homeTeam.team_name,
+                            HomeScore = x.m.home_score.ToString(),
+                            AwayTeam = awayTeam.team_name,
+                            AwayScore = x.m.away_score.ToString(),
+                            Referee = x.m.referee,
+                            IsHomeMatch = x.m.is_home_match
+                        }).Where(m => m.match_id == item.Index + 1);
+                List<string> parameter = new List<string>();
+                parameter.Add(match.Where());
+                frmChiTietTranDau detailForm = new frmChiTietTranDau(match);
                 detailForm.Show();
-
             }
         }
     }
