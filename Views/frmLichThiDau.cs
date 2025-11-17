@@ -142,9 +142,9 @@ namespace FakeMadrid.Views
                             IsHomeMatch = x.m.is_home_match
                         }).Where(m => m.match_id == item.Index + 1);
                 List<string> parameter = new List<string>();
-                parameter.Add(match.Where());
-                frmChiTietTranDau detailForm = new frmChiTietTranDau(match);
-                detailForm.Show();
+                // parameter.Add(match.Where());
+                // frmChiTietTranDau detailForm = new frmChiTietTranDau(match);
+                // detailForm.Show();
             }
         }
     }

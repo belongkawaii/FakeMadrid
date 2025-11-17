@@ -24,11 +24,34 @@ namespace FakeMadrid.Views
         private void frmListPlayer_Load(object sender, EventArgs e)
         {
             int level = SessionManager.LoggedLevel;
-            if(level != 0)
+            if(level == 3)
             {
                 btnThem.Enabled = false;
                 btnSua.Enabled = false;
                 btnXoa.Enabled = false;
+                btnIn.Enabled = false;
+            }
+            if (level == 2)
+            {
+                btnThem.Enabled = false;
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+            }
+            if (level == 1)
+            {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+                txtPlayerId.ReadOnly = true;
+                txtPlayerName.ReadOnly = true;
+                txtPhoneNumber.ReadOnly = true;
+                txtQuocTich.ReadOnly = true;
+                txtEmail.ReadOnly = true;
+                txtGia.ReadOnly = true;
+                txtLuong.ReadOnly = true;
+                txtCLBTruoc.ReadOnly = true;
+                dtpNgaySinh.Enabled = false;
+                dtpNgayHetHan.Enabled = false;
+                dtpNgayGiaNhap.Enabled = false;
             }
             // Thêm lựa chọn lọc
             cbbTrangThai.SelectedIndex = 0;

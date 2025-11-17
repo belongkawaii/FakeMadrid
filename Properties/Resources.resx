@@ -130,6 +130,9 @@
   <data name="xacthuc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frmXacThuc\xacthuc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Bao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmCEO\Bao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,9 +148,6 @@
   <data name="CEOTinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frmCEO\CEOTinh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="xacthuc-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmXacThuc\xacthuc-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iconPasss" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frmLogin\iconPasss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +156,9 @@
   </data>
   <data name="Long" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frmCEO\Long.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundXacThuc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmXacThuc\backgroundXacThuc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ChangePass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frmLogin\ChangePass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +169,8 @@
   <data name="CEOSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frmCEO\CEOSon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmCEO\Bao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="xacthuc-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmXacThuc\xacthuc-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Email" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frmSignin\Email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,7 +178,16 @@
   <data name="15C1-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frmDashBoard\15C1-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backgroundXacThuc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmXacThuc\backgroundXacThuc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Arda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmDashBoard\Arda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Line-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmDashBoard\Line-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NFL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmDashBoard\NFL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frmDashBoard\Vini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

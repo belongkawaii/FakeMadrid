@@ -5122,8 +5122,6 @@ namespace FakeMadrid.Database
 		
 		private string _Email;
 		
-		private string _RandomKey;
-		
 		private string _OTP;
 		
 		private System.Nullable<System.DateTime> _OTPDateSend;
@@ -5134,7 +5132,9 @@ namespace FakeMadrid.Database
 		
 		private System.Nullable<System.DateTime> _DateActive;
 		
-		private int _IDLevel;
+		private System.Nullable<int> _IDLevel;
+		
+		private string _RandomKey;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -5148,8 +5148,6 @@ namespace FakeMadrid.Database
     partial void OnPasswordChanged();
     partial void OnEmailChanging(string value);
     partial void OnEmailChanged();
-    partial void OnRandomKeyChanging(string value);
-    partial void OnRandomKeyChanged();
     partial void OnOTPChanging(string value);
     partial void OnOTPChanged();
     partial void OnOTPDateSendChanging(System.Nullable<System.DateTime> value);
@@ -5160,8 +5158,10 @@ namespace FakeMadrid.Database
     partial void OnActiveChanged();
     partial void OnDateActiveChanging(System.Nullable<System.DateTime> value);
     partial void OnDateActiveChanged();
-    partial void OnIDLevelChanging(int value);
+    partial void OnIDLevelChanging(System.Nullable<int> value);
     partial void OnIDLevelChanged();
+    partial void OnRandomKeyChanging(string value);
+    partial void OnRandomKeyChanged();
     #endregion
 		
 		public Account()
@@ -5245,26 +5245,6 @@ namespace FakeMadrid.Database
 					this._Email = value;
 					this.SendPropertyChanged("Email");
 					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RandomKey", DbType="VarChar(50)")]
-		public string RandomKey
-		{
-			get
-			{
-				return this._RandomKey;
-			}
-			set
-			{
-				if ((this._RandomKey != value))
-				{
-					this.OnRandomKeyChanging(value);
-					this.SendPropertyChanging();
-					this._RandomKey = value;
-					this.SendPropertyChanged("RandomKey");
-					this.OnRandomKeyChanged();
 				}
 			}
 		}
@@ -5369,8 +5349,8 @@ namespace FakeMadrid.Database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLevel", DbType="Int NOT NULL")]
-		public int IDLevel
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLevel", DbType="Int")]
+		public System.Nullable<int> IDLevel
 		{
 			get
 			{
@@ -5385,6 +5365,26 @@ namespace FakeMadrid.Database
 					this._IDLevel = value;
 					this.SendPropertyChanged("IDLevel");
 					this.OnIDLevelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RandomKey", DbType="VarChar(50)")]
+		public string RandomKey
+		{
+			get
+			{
+				return this._RandomKey;
+			}
+			set
+			{
+				if ((this._RandomKey != value))
+				{
+					this.OnRandomKeyChanging(value);
+					this.SendPropertyChanging();
+					this._RandomKey = value;
+					this.SendPropertyChanged("RandomKey");
+					this.OnRandomKeyChanged();
 				}
 			}
 		}
