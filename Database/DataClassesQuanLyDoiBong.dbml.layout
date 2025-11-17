@@ -92,7 +92,7 @@
         <elementListCompartment Id="4dcf4ef6-b07f-4334-aa52-ef2477eb887f" absoluteBounds="3.765, 28.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.75 : 7.24120198567708); (7.5 : 7.24120198567708); (7.5 : 8.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.75 : 7.24120198567708); (6.04166666666667 : 7.24120198567708 : JumpStart); (6.20833333333333 : 7.24120198567708 : JumpEnd); (7.5 : 7.24120198567708); (7.5 : 8.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Coach/Coach_Contract" />
       <nodes>
         <classShapeMoniker Id="0d2c6981-80c0-402e-aaaf-0be065f295a1" />
@@ -106,7 +106,7 @@
         <classShapeMoniker Id="0aa23d82-79fd-4d65-8503-e6769d3e9c25" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 11.25); (1.75 : 9.34375); (6.5 : 9.34375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(1.75 : 11.25); (1.75 : 9.34375); (6.04166666666667 : 9.34375 : JumpStart); (6.20833333333333 : 9.34375 : JumpEnd); (6.5 : 9.34375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Player/Player_Contract" />
       <nodes>
         <classShapeMoniker Id="5469443f-2524-4129-b5a0-25d77e6d0550" />
@@ -141,7 +141,7 @@
         <classShapeMoniker Id="e21c0c22-7e1f-489a-91f9-5c1efe08f4a9" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 12.2027498372396); (9.46875 : 12.2027498372396); (9.46875 : 15.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 12.2027498372396); (6.04166666666667 : 12.2027498372396 : JumpStart); (6.20833333333333 : 12.2027498372396 : JumpEnd); (9.46875 : 12.2027498372396); (9.46875 : 15.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Player/Player_PlayerMatchStatistic" />
       <nodes>
         <classShapeMoniker Id="5469443f-2524-4129-b5a0-25d77e6d0550" />
@@ -162,7 +162,7 @@
         <classShapeMoniker Id="0aa23d82-79fd-4d65-8503-e6769d3e9c25" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3 : 25.9066524251302); (3.29166666666667 : 25.9066524251302 : JumpStart); (3.45833333333333 : 25.9066524251302 : JumpEnd); (3.75 : 25.9066524251302)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(3 : 25.9066524251302); (3.75 : 25.9066524251302)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Team/Team_Match1" />
       <nodes>
         <classShapeMoniker Id="87c32851-243b-4ebb-8383-a732c385acf7" />
@@ -176,7 +176,7 @@
         <classShapeMoniker Id="637a5225-287c-4ca4-bfb9-d0cf76be8217" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.1249975 : 5.875); (5.1249975 : 4.40549967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.1249975 : 5.875); (5.1249975 : 4.40549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Coach/Coach_TrainingSession" />
       <nodes>
         <classShapeMoniker Id="0d2c6981-80c0-402e-aaaf-0be065f295a1" />
@@ -197,10 +197,10 @@
         <classShapeMoniker Id="d3218497-2847-4508-b70f-3f2ec43e367a" />
       </nodes>
     </associationConnector>
-    <classShape Id="43b7e7a0-724a-4647-a884-8d8f33d026fc" absoluteBounds="1, 0.75, 2, 2.9247054036458331">
+    <classShape Id="0c0aacdd-a786-4f66-9511-8225e1ba1979" absoluteBounds="1.25, 0.875, 2, 2.9247054036458331">
       <DataClassMoniker Name="/DataClassesQuanLyDoiBongDataContext/Account" />
       <nestedChildShapes>
-        <elementListCompartment Id="167e3d91-bfe8-433b-b4c2-0c7ec1ba0eed" absoluteBounds="1.0150000000000001, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="1742f012-a6ab-4c48-aab0-158b03c00347" absoluteBounds="1.2650000000000001, 1.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

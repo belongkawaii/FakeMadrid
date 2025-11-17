@@ -169,6 +169,12 @@
     <Compile Include="Views\frmLichThiDau.Designer.cs">
       <DependentUpon>frmLichThiDau.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmListAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmListAccount.Designer.cs">
+      <DependentUpon>frmListAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmListCoach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmLichThiDau.resx">
       <DependentUpon>frmLichThiDau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmListAccount.resx">
+      <DependentUpon>frmListAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmListCoach.resx">
       <DependentUpon>frmListCoach.cs</DependentUpon>
