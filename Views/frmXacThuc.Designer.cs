@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXacThuc));
             this.pnlRight = new System.Windows.Forms.Panel();
-            this.txtOTP = new System.Windows.Forms.TextBox();
-            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.btnGuiLai = new System.Windows.Forms.Button();
-            this.pnlLeft = new System.Windows.Forms.Panel();
+            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.txtOTP = new System.Windows.Forms.TextBox();
             this.pcbOTP = new System.Windows.Forms.PictureBox();
             this.pcbUser = new System.Windows.Forms.PictureBox();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.pnlLeft = new System.Windows.Forms.Panel();
             this.pnlRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOTP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
@@ -55,32 +55,23 @@
             this.pnlRight.Controls.Add(this.pcbUser);
             this.pnlRight.Controls.Add(this.pcbLogo);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRight.Location = new System.Drawing.Point(413, 0);
+            this.pnlRight.Location = new System.Drawing.Point(462, 0);
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Size = new System.Drawing.Size(356, 578);
             this.pnlRight.TabIndex = 0;
             // 
-            // txtOTP
+            // txtUser
             // 
-            this.txtOTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOTP.Location = new System.Drawing.Point(116, 365);
-            this.txtOTP.Name = "txtOTP";
-            this.txtOTP.Size = new System.Drawing.Size(228, 34);
-            this.txtOTP.TabIndex = 3;
-            // 
-            // btnXacNhan
-            // 
-            this.btnXacNhan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXacNhan.Location = new System.Drawing.Point(210, 462);
-            this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(134, 38);
-            this.btnXacNhan.TabIndex = 4;
-            this.btnXacNhan.Text = "XÁC NHẬN";
-            this.btnXacNhan.UseVisualStyleBackColor = true;
-            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(116, 272);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.ReadOnly = true;
+            this.txtUser.Size = new System.Drawing.Size(228, 34);
+            this.txtUser.TabIndex = 6;
             // 
             // btnGuiLai
             // 
+            this.btnGuiLai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuiLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuiLai.Location = new System.Drawing.Point(26, 462);
             this.btnGuiLai.Name = "btnGuiLai";
@@ -90,15 +81,25 @@
             this.btnGuiLai.UseVisualStyleBackColor = true;
             this.btnGuiLai.Click += new System.EventHandler(this.btnGuiLai_Click);
             // 
-            // pnlLeft
+            // btnXacNhan
             // 
-            this.pnlLeft.BackgroundImage = global::FakeMadrid.Properties.Resources.backgroundXacThuc;
-            this.pnlLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(413, 578);
-            this.pnlLeft.TabIndex = 1;
+            this.btnXacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXacNhan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.Location = new System.Drawing.Point(210, 462);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(134, 38);
+            this.btnXacNhan.TabIndex = 4;
+            this.btnXacNhan.Text = "XÁC NHẬN";
+            this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            // 
+            // txtOTP
+            // 
+            this.txtOTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOTP.Location = new System.Drawing.Point(116, 365);
+            this.txtOTP.Name = "txtOTP";
+            this.txtOTP.Size = new System.Drawing.Size(228, 34);
+            this.txtOTP.TabIndex = 3;
             // 
             // pcbOTP
             // 
@@ -130,25 +131,27 @@
             this.pcbLogo.TabIndex = 0;
             this.pcbLogo.TabStop = false;
             // 
-            // txtUser
+            // pnlLeft
             // 
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(116, 272);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.ReadOnly = true;
-            this.txtUser.Size = new System.Drawing.Size(228, 34);
-            this.txtUser.TabIndex = 6;
+            this.pnlLeft.BackgroundImage = global::FakeMadrid.Properties.Resources.backgroundXacThuc;
+            this.pnlLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Size = new System.Drawing.Size(462, 578);
+            this.pnlLeft.TabIndex = 1;
             // 
             // frmXacThuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 578);
+            this.ClientSize = new System.Drawing.Size(818, 578);
             this.Controls.Add(this.pnlLeft);
             this.Controls.Add(this.pnlRight);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmXacThuc";
             this.Text = "XÁC THỰC TÀI KHOẢN";
+            this.Load += new System.EventHandler(this.frmXacThuc_Load);
             this.pnlRight.ResumeLayout(false);
             this.pnlRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOTP)).EndInit();

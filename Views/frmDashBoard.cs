@@ -67,7 +67,8 @@ namespace FakeMadrid.Views
             //Phân quyền
             if (level == 0)
             {
-                //Mở full
+                //Mở .
+                ManagerAccountToolStripMenuItem.Visible = true;
                 ManageCoachToolStripMenuItem.Visible = true;
                 PlayerManagementToolStripMenuItem.Visible = true;
                 ScheduleToolStripMenuItem.Visible = true;
@@ -77,6 +78,7 @@ namespace FakeMadrid.Views
             }
             else if (level == 1) //Coach
             {
+                ManagerAccountToolStripMenuItem.Visible = false;
                 ManageCoachToolStripMenuItem.Visible = true;
                 PlayerManagementToolStripMenuItem.Visible = true;
                 ScheduleToolStripMenuItem.Visible = true;
@@ -87,7 +89,7 @@ namespace FakeMadrid.Views
             } 
             else if (level == 2) //Player
             {
-                
+                ManagerAccountToolStripMenuItem.Visible = false;
                 PlayerManagementToolStripMenuItem.Visible = true;
                 ScheduleToolStripMenuItem.Visible = true;
                 ManageCoachToolStripMenuItem.Visible = false;

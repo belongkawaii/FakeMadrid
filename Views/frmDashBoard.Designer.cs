@@ -59,6 +59,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblInfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ManagerAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgTrophy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -73,7 +74,7 @@
             this.panelHead.Controls.Add(this.mStripToolBox);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
-            this.panelHead.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHead.Margin = new System.Windows.Forms.Padding(4);
             this.panelHead.Name = "panelHead";
             this.panelHead.Size = new System.Drawing.Size(1726, 73);
             this.panelHead.TabIndex = 0;
@@ -84,7 +85,7 @@
             this.imgTrophy.Dock = System.Windows.Forms.DockStyle.Right;
             this.imgTrophy.Image = global::FakeMadrid.Properties.Resources._15C1_removebg_preview;
             this.imgTrophy.Location = new System.Drawing.Point(1560, 0);
-            this.imgTrophy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgTrophy.Margin = new System.Windows.Forms.Padding(4);
             this.imgTrophy.Name = "imgTrophy";
             this.imgTrophy.Size = new System.Drawing.Size(83, 73);
             this.imgTrophy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -97,7 +98,7 @@
             this.imgLogo.Dock = System.Windows.Forms.DockStyle.Right;
             this.imgLogo.Image = global::FakeMadrid.Properties.Resources.Logo;
             this.imgLogo.Location = new System.Drawing.Point(1643, 0);
-            this.imgLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgLogo.Margin = new System.Windows.Forms.Padding(4);
             this.imgLogo.Name = "imgLogo";
             this.imgLogo.Size = new System.Drawing.Size(83, 73);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,7 +188,8 @@
             this.MatchScheduleMenuItem,
             this.ShopToolStripMenuItem,
             this.listCeoToolStripMenuItem,
-            this.tHỐNGKÊToolStripMenuItem});
+            this.tHỐNGKÊToolStripMenuItem,
+            this.ManagerAccountToolStripMenuItem});
             this.CategoryToolStripMenuItem.Name = "CategoryToolStripMenuItem";
             this.CategoryToolStripMenuItem.Size = new System.Drawing.Size(144, 30);
             this.CategoryToolStripMenuItem.Text = "&DANH MỤC";
@@ -196,34 +198,34 @@
             // 
             this.TitleToolStripMenuItem.Image = global::FakeMadrid.Properties.Resources._15C1_removebg_preview;
             this.TitleToolStripMenuItem.Name = "TitleToolStripMenuItem";
-            this.TitleToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
+            this.TitleToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
             this.TitleToolStripMenuItem.Text = "DANH HIỆU";
             this.TitleToolStripMenuItem.Click += new System.EventHandler(this.TitleToolStripMenuItem_Click);
             // 
             // MatchScheduleMenuItem
             // 
             this.MatchScheduleMenuItem.Name = "MatchScheduleMenuItem";
-            this.MatchScheduleMenuItem.Size = new System.Drawing.Size(275, 30);
+            this.MatchScheduleMenuItem.Size = new System.Drawing.Size(321, 30);
             this.MatchScheduleMenuItem.Text = "LỊCH THI ĐẤU";
             this.MatchScheduleMenuItem.Click += new System.EventHandler(this.MatchScheduleMenuItem_Click);
             // 
             // ShopToolStripMenuItem
             // 
             this.ShopToolStripMenuItem.Name = "ShopToolStripMenuItem";
-            this.ShopToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
+            this.ShopToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
             this.ShopToolStripMenuItem.Text = "CỬA HÀNG";
             // 
             // listCeoToolStripMenuItem
             // 
             this.listCeoToolStripMenuItem.Name = "listCeoToolStripMenuItem";
-            this.listCeoToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
+            this.listCeoToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
             this.listCeoToolStripMenuItem.Text = "DANH SÁCH CEO";
             this.listCeoToolStripMenuItem.Click += new System.EventHandler(this.listCeoToolStripMenuItem_Click);
             // 
             // tHỐNGKÊToolStripMenuItem
             // 
             this.tHỐNGKÊToolStripMenuItem.Name = "tHỐNGKÊToolStripMenuItem";
-            this.tHỐNGKÊToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
+            this.tHỐNGKÊToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
             this.tHỐNGKÊToolStripMenuItem.Text = "THỐNG KÊ";
             this.tHỐNGKÊToolStripMenuItem.Click += new System.EventHandler(this.tHỐNGKÊToolStripMenuItem_Click);
             // 
@@ -314,6 +316,12 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // ManagerAccountToolStripMenuItem
+            // 
+            this.ManagerAccountToolStripMenuItem.Name = "ManagerAccountToolStripMenuItem";
+            this.ManagerAccountToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
+            this.ManagerAccountToolStripMenuItem.Text = "QUẢN LÝ TÀI KHOẢN";
+            // 
             // frmDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -324,7 +332,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mStripToolBox;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashBoard";
@@ -373,5 +381,6 @@
         private System.Windows.Forms.ToolStripMenuItem SigninToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ChangePassToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tHỐNGKÊToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ManagerAccountToolStripMenuItem;
     }
 }

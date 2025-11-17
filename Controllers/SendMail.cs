@@ -14,7 +14,7 @@ namespace FakeMadrid.Controllers
     public static class SendMail
     {
         public static string taikhoan = "fakemadridofficial001@gmail.com";
-        public static string matkhau = "@@AaBcd123456";
+        public static string matkhau = "vuxrxehojdddxere";
 
 
 

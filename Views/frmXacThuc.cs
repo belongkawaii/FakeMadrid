@@ -75,5 +75,10 @@ namespace FakeMadrid.Views
                 MessageBox.Show("Đã gửi lại mã OTP!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void frmXacThuc_Load(object sender, EventArgs e)
+        {
+            txtUser.Text = taikhoan;
+        }
     }
 }
