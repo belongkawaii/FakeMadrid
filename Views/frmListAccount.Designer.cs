@@ -38,6 +38,12 @@
             this.btnTim = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.grbInfor = new System.Windows.Forms.GroupBox();
+            this.cbbActive = new System.Windows.Forms.ComboBox();
+            this.dtpNgayKichHoat = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayTaoOTP = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayTaoTaiKhoan = new System.Windows.Forms.DateTimePicker();
+            this.cbbLevel = new System.Windows.Forms.ComboBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtOTP = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -51,15 +57,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.cbbLevel = new System.Windows.Forms.ComboBox();
-            this.dtpNgayTaoTaiKhoan = new System.Windows.Forms.DateTimePicker();
-            this.dtpNgayTaoOTP = new System.Windows.Forms.DateTimePicker();
-            this.dtpNgayKichHoat = new System.Windows.Forms.DateTimePicker();
-            this.cbbActive = new System.Windows.Forms.ComboBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +66,9 @@
             this.Active = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateActive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panelFooter.SuspendLayout();
             this.grbChucNang.SuspendLayout();
             this.grbInfor.SuspendLayout();
@@ -219,6 +219,71 @@
             this.grbInfor.TabIndex = 8;
             this.grbInfor.TabStop = false;
             this.grbInfor.Text = "Thông tin cầu thủ";
+            // 
+            // cbbActive
+            // 
+            this.cbbActive.FormattingEnabled = true;
+            this.cbbActive.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.cbbActive.Location = new System.Drawing.Point(617, 126);
+            this.cbbActive.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbActive.Name = "cbbActive";
+            this.cbbActive.Size = new System.Drawing.Size(224, 28);
+            this.cbbActive.TabIndex = 46;
+            // 
+            // dtpNgayKichHoat
+            // 
+            this.dtpNgayKichHoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayKichHoat.Location = new System.Drawing.Point(614, 169);
+            this.dtpNgayKichHoat.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpNgayKichHoat.Name = "dtpNgayKichHoat";
+            this.dtpNgayKichHoat.Size = new System.Drawing.Size(227, 26);
+            this.dtpNgayKichHoat.TabIndex = 45;
+            // 
+            // dtpNgayTaoOTP
+            // 
+            this.dtpNgayTaoOTP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayTaoOTP.Location = new System.Drawing.Point(614, 29);
+            this.dtpNgayTaoOTP.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpNgayTaoOTP.Name = "dtpNgayTaoOTP";
+            this.dtpNgayTaoOTP.Size = new System.Drawing.Size(227, 26);
+            this.dtpNgayTaoOTP.TabIndex = 44;
+            // 
+            // dtpNgayTaoTaiKhoan
+            // 
+            this.dtpNgayTaoTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayTaoTaiKhoan.Location = new System.Drawing.Point(614, 80);
+            this.dtpNgayTaoTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpNgayTaoTaiKhoan.Name = "dtpNgayTaoTaiKhoan";
+            this.dtpNgayTaoTaiKhoan.Size = new System.Drawing.Size(227, 26);
+            this.dtpNgayTaoTaiKhoan.TabIndex = 43;
+            // 
+            // cbbLevel
+            // 
+            this.cbbLevel.FormattingEnabled = true;
+            this.cbbLevel.Items.AddRange(new object[] {
+            "All",
+            "CEO",
+            "Coach",
+            "Player",
+            "Viewer"});
+            this.cbbLevel.Location = new System.Drawing.Point(199, 212);
+            this.cbbLevel.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbLevel.Name = "cbbLevel";
+            this.cbbLevel.Size = new System.Drawing.Size(224, 28);
+            this.cbbLevel.TabIndex = 39;
+            this.cbbLevel.SelectedIndexChanged += new System.EventHandler(this.cbbLevel_SelectedIndexChanged);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.HideSelection = false;
+            this.txtEmail.Location = new System.Drawing.Point(199, 121);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(224, 29);
+            this.txtEmail.TabIndex = 38;
             // 
             // label16
             // 
@@ -382,108 +447,6 @@
             this.dgvAccount.TabIndex = 2;
             this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
             // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbl1.Location = new System.Drawing.Point(9, 44);
-            this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(218, 21);
-            this.lbl1.TabIndex = 1;
-            this.lbl1.Text = "DANH SÁCH TÀI KHOẢN";
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblTitle.Location = new System.Drawing.Point(591, 9);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(302, 31);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "QUẢN LÝ TÀI KHOẢN";
-            // 
-            // panelMain
-            // 
-            this.panelMain.Controls.Add(this.txtSearch);
-            this.panelMain.Controls.Add(this.dgvAccount);
-            this.panelMain.Controls.Add(this.lbl1);
-            this.panelMain.Controls.Add(this.lblTitle);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(2);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1427, 753);
-            this.panelMain.TabIndex = 5;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.HideSelection = false;
-            this.txtEmail.Location = new System.Drawing.Point(199, 121);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(224, 29);
-            this.txtEmail.TabIndex = 38;
-            // 
-            // cbbLevel
-            // 
-            this.cbbLevel.FormattingEnabled = true;
-            this.cbbLevel.Items.AddRange(new object[] {
-            "All",
-            "CEO",
-            "Coach",
-            "Player",
-            "Viewer"});
-            this.cbbLevel.Location = new System.Drawing.Point(199, 212);
-            this.cbbLevel.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbLevel.Name = "cbbLevel";
-            this.cbbLevel.Size = new System.Drawing.Size(224, 28);
-            this.cbbLevel.TabIndex = 39;
-            this.cbbLevel.SelectedIndexChanged += new System.EventHandler(this.cbbLevel_SelectedIndexChanged);
-            // 
-            // dtpNgayTaoTaiKhoan
-            // 
-            this.dtpNgayTaoTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayTaoTaiKhoan.Location = new System.Drawing.Point(614, 80);
-            this.dtpNgayTaoTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpNgayTaoTaiKhoan.Name = "dtpNgayTaoTaiKhoan";
-            this.dtpNgayTaoTaiKhoan.Size = new System.Drawing.Size(227, 26);
-            this.dtpNgayTaoTaiKhoan.TabIndex = 43;
-            // 
-            // dtpNgayTaoOTP
-            // 
-            this.dtpNgayTaoOTP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayTaoOTP.Location = new System.Drawing.Point(614, 29);
-            this.dtpNgayTaoOTP.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpNgayTaoOTP.Name = "dtpNgayTaoOTP";
-            this.dtpNgayTaoOTP.Size = new System.Drawing.Size(227, 26);
-            this.dtpNgayTaoOTP.TabIndex = 44;
-            // 
-            // dtpNgayKichHoat
-            // 
-            this.dtpNgayKichHoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayKichHoat.Location = new System.Drawing.Point(614, 169);
-            this.dtpNgayKichHoat.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpNgayKichHoat.Name = "dtpNgayKichHoat";
-            this.dtpNgayKichHoat.Size = new System.Drawing.Size(227, 26);
-            this.dtpNgayKichHoat.TabIndex = 45;
-            // 
-            // cbbActive
-            // 
-            this.cbbActive.FormattingEnabled = true;
-            this.cbbActive.Items.AddRange(new object[] {
-            "true",
-            "false"});
-            this.cbbActive.Location = new System.Drawing.Point(617, 126);
-            this.cbbActive.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbActive.Name = "cbbActive";
-            this.cbbActive.Size = new System.Drawing.Size(224, 28);
-            this.cbbActive.TabIndex = 46;
-            // 
             // ID
             // 
             this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -565,6 +528,43 @@
             this.IDLevel.MinimumWidth = 6;
             this.IDLevel.Name = "IDLevel";
             this.IDLevel.ReadOnly = true;
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbl1.Location = new System.Drawing.Point(9, 44);
+            this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(218, 21);
+            this.lbl1.TabIndex = 1;
+            this.lbl1.Text = "DANH SÁCH TÀI KHOẢN";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblTitle.Location = new System.Drawing.Point(591, 9);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(302, 31);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "QUẢN LÝ TÀI KHOẢN";
+            // 
+            // panelMain
+            // 
+            this.panelMain.Controls.Add(this.txtSearch);
+            this.panelMain.Controls.Add(this.dgvAccount);
+            this.panelMain.Controls.Add(this.lbl1);
+            this.panelMain.Controls.Add(this.lblTitle);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1427, 753);
+            this.panelMain.TabIndex = 5;
             // 
             // frmListAccount
             // 

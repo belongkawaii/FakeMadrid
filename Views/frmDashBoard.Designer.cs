@@ -47,6 +47,7 @@
             this.ShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listCeoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tHỐNGKÊToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManagerAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PlayerManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PlayerListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PlayerContractToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +60,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblInfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ManagerAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgTrophy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -74,9 +74,8 @@
             this.panelHead.Controls.Add(this.mStripToolBox);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
-            this.panelHead.Margin = new System.Windows.Forms.Padding(4);
             this.panelHead.Name = "panelHead";
-            this.panelHead.Size = new System.Drawing.Size(1726, 73);
+            this.panelHead.Size = new System.Drawing.Size(1294, 59);
             this.panelHead.TabIndex = 0;
             // 
             // imgTrophy
@@ -84,10 +83,9 @@
             this.imgTrophy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgTrophy.Dock = System.Windows.Forms.DockStyle.Right;
             this.imgTrophy.Image = global::FakeMadrid.Properties.Resources._15C1_removebg_preview;
-            this.imgTrophy.Location = new System.Drawing.Point(1560, 0);
-            this.imgTrophy.Margin = new System.Windows.Forms.Padding(4);
+            this.imgTrophy.Location = new System.Drawing.Point(1170, 0);
             this.imgTrophy.Name = "imgTrophy";
-            this.imgTrophy.Size = new System.Drawing.Size(83, 73);
+            this.imgTrophy.Size = new System.Drawing.Size(62, 59);
             this.imgTrophy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgTrophy.TabIndex = 3;
             this.imgTrophy.TabStop = false;
@@ -97,10 +95,9 @@
             // 
             this.imgLogo.Dock = System.Windows.Forms.DockStyle.Right;
             this.imgLogo.Image = global::FakeMadrid.Properties.Resources.Logo;
-            this.imgLogo.Location = new System.Drawing.Point(1643, 0);
-            this.imgLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.imgLogo.Location = new System.Drawing.Point(1232, 0);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(83, 73);
+            this.imgLogo.Size = new System.Drawing.Size(62, 59);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogo.TabIndex = 2;
             this.imgLogo.TabStop = false;
@@ -120,8 +117,8 @@
             this.HelpToolStripMenuItem});
             this.mStripToolBox.Location = new System.Drawing.Point(0, 0);
             this.mStripToolBox.Name = "mStripToolBox";
-            this.mStripToolBox.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mStripToolBox.Size = new System.Drawing.Size(962, 34);
+            this.mStripToolBox.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.mStripToolBox.Size = new System.Drawing.Size(722, 28);
             this.mStripToolBox.TabIndex = 0;
             this.mStripToolBox.Text = "menuStrip1";
             // 
@@ -135,7 +132,7 @@
             this.ChangePassToolStripMenuItem,
             this.ExitToolStripMenuItem});
             this.SystemToolStripMenuItem.Name = "SystemToolStripMenuItem";
-            this.SystemToolStripMenuItem.Size = new System.Drawing.Size(137, 30);
+            this.SystemToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
             this.SystemToolStripMenuItem.Text = "&HỆ THỐNG";
             // 
             // LoginToolStripMenuItem
@@ -144,40 +141,40 @@
             this.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem";
             this.LoginToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.K)));
-            this.LoginToolStripMenuItem.Size = new System.Drawing.Size(340, 30);
+            this.LoginToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
             this.LoginToolStripMenuItem.Text = "ĐĂNG &NHẬP";
             this.LoginToolStripMenuItem.Click += new System.EventHandler(this.LoginToolStripMenuItem_Click);
             // 
             // SigninToolStripMenuItem
             // 
             this.SigninToolStripMenuItem.Name = "SigninToolStripMenuItem";
-            this.SigninToolStripMenuItem.Size = new System.Drawing.Size(340, 30);
+            this.SigninToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
             this.SigninToolStripMenuItem.Text = "ĐĂNG KÝ";
             this.SigninToolStripMenuItem.Click += new System.EventHandler(this.đĂNGKÝToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(337, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(274, 6);
             // 
             // LogoutToolStripMenuItem
             // 
             this.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem";
-            this.LogoutToolStripMenuItem.Size = new System.Drawing.Size(340, 30);
+            this.LogoutToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
             this.LogoutToolStripMenuItem.Text = "ĐĂNG XUẤT";
             this.LogoutToolStripMenuItem.Click += new System.EventHandler(this.LogoutToolStripMenuItem_Click);
             // 
             // ChangePassToolStripMenuItem
             // 
             this.ChangePassToolStripMenuItem.Name = "ChangePassToolStripMenuItem";
-            this.ChangePassToolStripMenuItem.Size = new System.Drawing.Size(340, 30);
+            this.ChangePassToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
             this.ChangePassToolStripMenuItem.Text = "ĐỔI MẬT KHÂU";
             this.ChangePassToolStripMenuItem.Click += new System.EventHandler(this.đỔIMẬTKHÂUToolStripMenuItem_Click);
             // 
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(340, 30);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
             this.ExitToolStripMenuItem.Text = "THOÁT";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -191,43 +188,50 @@
             this.tHỐNGKÊToolStripMenuItem,
             this.ManagerAccountToolStripMenuItem});
             this.CategoryToolStripMenuItem.Name = "CategoryToolStripMenuItem";
-            this.CategoryToolStripMenuItem.Size = new System.Drawing.Size(144, 30);
+            this.CategoryToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
             this.CategoryToolStripMenuItem.Text = "&DANH MỤC";
             // 
             // TitleToolStripMenuItem
             // 
             this.TitleToolStripMenuItem.Image = global::FakeMadrid.Properties.Resources._15C1_removebg_preview;
             this.TitleToolStripMenuItem.Name = "TitleToolStripMenuItem";
-            this.TitleToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
+            this.TitleToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
             this.TitleToolStripMenuItem.Text = "DANH HIỆU";
             this.TitleToolStripMenuItem.Click += new System.EventHandler(this.TitleToolStripMenuItem_Click);
             // 
             // MatchScheduleMenuItem
             // 
             this.MatchScheduleMenuItem.Name = "MatchScheduleMenuItem";
-            this.MatchScheduleMenuItem.Size = new System.Drawing.Size(321, 30);
+            this.MatchScheduleMenuItem.Size = new System.Drawing.Size(267, 26);
             this.MatchScheduleMenuItem.Text = "LỊCH THI ĐẤU";
             this.MatchScheduleMenuItem.Click += new System.EventHandler(this.MatchScheduleMenuItem_Click);
             // 
             // ShopToolStripMenuItem
             // 
             this.ShopToolStripMenuItem.Name = "ShopToolStripMenuItem";
-            this.ShopToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
+            this.ShopToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
             this.ShopToolStripMenuItem.Text = "CỬA HÀNG";
             // 
             // listCeoToolStripMenuItem
             // 
             this.listCeoToolStripMenuItem.Name = "listCeoToolStripMenuItem";
-            this.listCeoToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
+            this.listCeoToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
             this.listCeoToolStripMenuItem.Text = "DANH SÁCH CEO";
             this.listCeoToolStripMenuItem.Click += new System.EventHandler(this.listCeoToolStripMenuItem_Click);
             // 
             // tHỐNGKÊToolStripMenuItem
             // 
             this.tHỐNGKÊToolStripMenuItem.Name = "tHỐNGKÊToolStripMenuItem";
-            this.tHỐNGKÊToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
+            this.tHỐNGKÊToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
             this.tHỐNGKÊToolStripMenuItem.Text = "THỐNG KÊ";
             this.tHỐNGKÊToolStripMenuItem.Click += new System.EventHandler(this.tHỐNGKÊToolStripMenuItem_Click);
+            // 
+            // ManagerAccountToolStripMenuItem
+            // 
+            this.ManagerAccountToolStripMenuItem.Name = "ManagerAccountToolStripMenuItem";
+            this.ManagerAccountToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
+            this.ManagerAccountToolStripMenuItem.Text = "QUẢN LÝ TÀI KHOẢN";
+            this.ManagerAccountToolStripMenuItem.Click += new System.EventHandler(this.ManagerAccountToolStripMenuItem_Click);
             // 
             // PlayerManagementToolStripMenuItem
             // 
@@ -235,20 +239,20 @@
             this.PlayerListToolStripMenuItem,
             this.PlayerContractToolStripMenuItem});
             this.PlayerManagementToolStripMenuItem.Name = "PlayerManagementToolStripMenuItem";
-            this.PlayerManagementToolStripMenuItem.Size = new System.Drawing.Size(225, 30);
+            this.PlayerManagementToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
             this.PlayerManagementToolStripMenuItem.Text = "QUẢN LÝ &CẦU THỦ";
             // 
             // PlayerListToolStripMenuItem
             // 
             this.PlayerListToolStripMenuItem.Name = "PlayerListToolStripMenuItem";
-            this.PlayerListToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
+            this.PlayerListToolStripMenuItem.Size = new System.Drawing.Size(267, 24);
             this.PlayerListToolStripMenuItem.Text = "DANH SÁCH CẦU THỦ";
             this.PlayerListToolStripMenuItem.Click += new System.EventHandler(this.PlayerListToolStripMenuItem_Click);
             // 
             // PlayerContractToolStripMenuItem
             // 
             this.PlayerContractToolStripMenuItem.Name = "PlayerContractToolStripMenuItem";
-            this.PlayerContractToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
+            this.PlayerContractToolStripMenuItem.Size = new System.Drawing.Size(267, 24);
             this.PlayerContractToolStripMenuItem.Text = "HỢP ĐỒNG";
             // 
             // ManageCoachToolStripMenuItem
@@ -257,33 +261,33 @@
             this.ListCoachToolStripMenuItem,
             this.CoachContractToolStripMenuItem});
             this.ManageCoachToolStripMenuItem.Name = "ManageCoachToolStripMenuItem";
-            this.ManageCoachToolStripMenuItem.Size = new System.Drawing.Size(169, 30);
+            this.ManageCoachToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.ManageCoachToolStripMenuItem.Text = "QUẢN LÝ HL&V";
             // 
             // ListCoachToolStripMenuItem
             // 
             this.ListCoachToolStripMenuItem.Name = "ListCoachToolStripMenuItem";
-            this.ListCoachToolStripMenuItem.Size = new System.Drawing.Size(271, 30);
+            this.ListCoachToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
             this.ListCoachToolStripMenuItem.Text = "DANH SÁCH HLV";
             this.ListCoachToolStripMenuItem.Click += new System.EventHandler(this.ListCoachToolStripMenuItem_Click);
             // 
             // CoachContractToolStripMenuItem
             // 
             this.CoachContractToolStripMenuItem.Name = "CoachContractToolStripMenuItem";
-            this.CoachContractToolStripMenuItem.Size = new System.Drawing.Size(271, 30);
+            this.CoachContractToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
             this.CoachContractToolStripMenuItem.Text = "HỢP ĐỒNG";
             // 
             // ScheduleToolStripMenuItem
             // 
             this.ScheduleToolStripMenuItem.Name = "ScheduleToolStripMenuItem";
-            this.ScheduleToolStripMenuItem.Size = new System.Drawing.Size(74, 30);
+            this.ScheduleToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
             this.ScheduleToolStripMenuItem.Text = "&LỊCH";
             this.ScheduleToolStripMenuItem.Click += new System.EventHandler(this.ScheduleToolStripMenuItem_Click);
             // 
             // HelpToolStripMenuItem
             // 
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(107, 30);
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.HelpToolStripMenuItem.Text = "HỖ &TRỢ";
             this.HelpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
             // 
@@ -293,46 +297,39 @@
             this.sStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.lblInfor});
-            this.sStrip.Location = new System.Drawing.Point(0, 856);
+            this.sStrip.Location = new System.Drawing.Point(0, 695);
             this.sStrip.Name = "sStrip";
-            this.sStrip.Padding = new System.Windows.Forms.Padding(2, 0, 19, 0);
-            this.sStrip.Size = new System.Drawing.Size(1726, 26);
+            this.sStrip.Padding = new System.Windows.Forms.Padding(2, 0, 14, 0);
+            this.sStrip.Size = new System.Drawing.Size(1294, 22);
             this.sStrip.TabIndex = 1;
             this.sStrip.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(72, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(58, 17);
             this.toolStripStatusLabel1.Text = "Thời Gian";
             // 
             // lblInfor
             // 
             this.lblInfor.Name = "lblInfor";
-            this.lblInfor.Size = new System.Drawing.Size(149, 20);
+            this.lblInfor.Size = new System.Drawing.Size(119, 17);
             this.lblInfor.Text = "Bạn chưa đăng nhập!";
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // ManagerAccountToolStripMenuItem
-            // 
-            this.ManagerAccountToolStripMenuItem.Name = "ManagerAccountToolStripMenuItem";
-            this.ManagerAccountToolStripMenuItem.Size = new System.Drawing.Size(321, 30);
-            this.ManagerAccountToolStripMenuItem.Text = "QUẢN LÝ TÀI KHOẢN";
-            // 
             // frmDashBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1726, 882);
+            this.ClientSize = new System.Drawing.Size(1294, 717);
             this.Controls.Add(this.sStrip);
             this.Controls.Add(this.panelHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mStripToolBox;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashBoard";

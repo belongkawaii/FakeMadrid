@@ -1,4 +1,5 @@
-﻿using FakeMadrid.Database;
+﻿using FakeMadrid.Controllers;
+using FakeMadrid.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,31 @@ namespace FakeMadrid.Views
 
         private void frmListCoach_Load(object sender, EventArgs e)
         {
+            int level = SessionManager.LoggedLevel;
+            if (level == 3)
+            {
+                btnThem.Enabled = false;
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+                btnIn.Enabled = false;
+            }
+            if (level == 2)
+            {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+                btnSua.Enabled = false;
+                btnIn.Enabled = false;
+            }
+            if (level == 1)
+            {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+                dtpNgayHetHan.Enabled = false;
+                dtpNgayGiaHan.Enabled = false;
+                txtCoachId.Enabled = false;
+                txtLuong.Enabled = false;
+            }
+
             cbbRole.SelectedIndex = 0;
             loadData();
            

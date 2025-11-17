@@ -220,7 +220,7 @@ namespace FakeMadrid.Views
                 txtUsername.Text = acc.Username;
                 txtEmail.Text = acc.Email;
                 txtOTP.Text = acc.OTP;
-                cbbActive.SelectedItem = acc.Active;
+                cbbActive.SelectedItem = acc.Active.Value ? "True" : "False";
                 cbbLevel.SelectedValue = acc.IDLevel;
 
                 dtpNgayKichHoat.Value = acc.DateActive ?? DateTime.Now;
