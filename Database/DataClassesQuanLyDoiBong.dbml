@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyBongDa" Class="DataClassesQuanLyDoiBongDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=QuanLyBongDa;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="FakeMadrid.Properties.Settings" SettingsPropertyName="QuanLyBongDaConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=QuanLyBongDa;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="FakeMadrid.Properties.Settings" SettingsPropertyName="QuanLyBongDaConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Coach" Member="Coaches">
     <Type Name="Coach">
       <Column Name="coach_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -16,17 +16,6 @@
       <Association Name="Coach_TrainingSession" Member="TrainingSessions" ThisKey="coach_id" OtherKey="coach_id" Type="TrainingSession" />
     </Type>
   </Table>
-  <Table Name="dbo.Competition" Member="Competitions">
-    <Type Name="Competition">
-      <Column Name="competition_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="competition_name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="competition_type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="season" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="country" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="Competition_Match" Member="Matches" ThisKey="competition_id" OtherKey="competition_id" Type="Match" />
-      <Association Name="Competition_Trophy" Member="Trophies" ThisKey="competition_id" OtherKey="competition_id" Type="Trophy" />
-    </Type>
-  </Table>
   <Table Name="dbo.Contract" Member="Contracts">
     <Type Name="Contract">
       <Column Name="contract_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -41,6 +30,17 @@
       <Column Name="status" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Association Name="Coach_Contract" Member="Coach" ThisKey="coach_id" OtherKey="coach_id" Type="Coach" IsForeignKey="true" />
       <Association Name="Player_Contract" Member="Player" ThisKey="player_id" OtherKey="player_id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Competition" Member="Competitions">
+    <Type Name="Competition">
+      <Column Name="competition_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="competition_name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="competition_type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="season" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Competition_Match" Member="Matches" ThisKey="competition_id" OtherKey="competition_id" Type="Match" />
+      <Association Name="Competition_Trophy" Member="Trophies" ThisKey="competition_id" OtherKey="competition_id" Type="Trophy" />
     </Type>
   </Table>
   <Table Name="dbo.Injury" Member="Injuries">

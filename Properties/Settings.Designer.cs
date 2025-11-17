@@ -26,11 +26,33 @@ namespace FakeMadrid.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\ProjectModels;Initial Catalog=QuanLyBongDa;Integrated Secur" +
-            "ity=True;TrustServerCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=QuanLyBongDa;Integrated Security=True;TrustServerCe" +
+            "rtificate=True")]
         public string QuanLyBongDaConnectionString {
             get {
                 return ((string)(this["QuanLyBongDaConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=ClubManagement;Integrated Security=True;Enc" +
+            "rypt=True;TrustServerCertificate=True")]
+        public string ClubManagementConnectionString {
+            get {
+                return ((string)(this["ClubManagementConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=QuanLyBongDa;Integrated Security=True;Trust" +
+            "ServerCertificate=True")]
+        public string QuanLyBongDaConnectionString1 {
+            get {
+                return ((string)(this["QuanLyBongDaConnectionString1"]));
             }
         }
     }

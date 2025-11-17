@@ -49,6 +49,7 @@ namespace FakeMadrid.Controllers
             }
             catch
             {
+                MessageBox.Show("Khong gui duoc mail", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
