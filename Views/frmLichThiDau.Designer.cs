@@ -34,7 +34,10 @@
             this.pnlRight = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lstMatch = new System.Windows.Forms.ListView();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.pnlLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,6 +63,7 @@
             // 
             // pnlLeft
             // 
+            this.pnlLeft.Controls.Add(this.pictureBox23);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 53);
             this.pnlLeft.Name = "pnlLeft";
@@ -93,6 +97,14 @@
             this.lstMatch.UseCompatibleStateImageBehavior = false;
             this.lstMatch.DoubleClick += new System.EventHandler(this.lstMatch_DoubleClick);
             // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Location = new System.Drawing.Point(13, 66);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(136, 244);
+            this.pictureBox23.TabIndex = 0;
+            this.pictureBox23.TabStop = false;
+            // 
             // frmLichThiDau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -112,6 +124,8 @@
             this.Load += new System.EventHandler(this.frmLichThiDau_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pnlLeft.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,5 +226,6 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListView lstMatch;
+        private System.Windows.Forms.PictureBox pictureBox23;
     }
 }
