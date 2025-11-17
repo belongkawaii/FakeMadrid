@@ -34,7 +34,7 @@ namespace FakeMadrid.Views
         {
             InitializeComponent();
             //isShowing = false;
-            //Taikhoan = username;
+            Taikhoan = username;
         }
 
         

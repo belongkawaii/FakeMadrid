@@ -139,6 +139,10 @@ namespace FakeMadrid.Views
                 ManageCoachToolStripMenuItem.Visible = false;
                 ScheduleToolStripMenuItem.Visible = false;
                 HelpToolStripMenuItem.Visible = true;
+                LogoutToolStripMenuItem.Visible = false;
+                LoginToolStripMenuItem.Visible = true;
+                SigninToolStripMenuItem.Visible = true;
+                ChangePassToolStripMenuItem.Visible = false;
             }
             else lblInfor.Text = $"Xin chào, {SessionManager.LoggedUser}!";
         }
@@ -184,7 +188,8 @@ namespace FakeMadrid.Views
 
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmHelp frm = new frmHelp();
+            frm.Show();
         }
 
         private void đĂNGKÝToolStripMenuItem_Click(object sender, EventArgs e)
