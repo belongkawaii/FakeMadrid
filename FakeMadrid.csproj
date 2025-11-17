@@ -161,6 +161,12 @@
     <Compile Include="Views\frmChangePass.Designer.cs">
       <DependentUpon>frmChangePass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmCoachContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmCoachContract.Designer.cs">
+      <DependentUpon>frmCoachContract.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmCoachPrinter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,12 @@
     <Compile Include="Views\frmNFL.Designer.cs">
       <DependentUpon>frmNFL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmPlayerContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmPlayerContract.Designer.cs">
+      <DependentUpon>frmPlayerContract.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmPlayerPrinter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +303,9 @@
     <EmbeddedResource Include="Views\frmChangePass.resx">
       <DependentUpon>frmChangePass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmCoachContract.resx">
+      <DependentUpon>frmCoachContract.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmCoachPrinter.resx">
       <DependentUpon>frmCoachPrinter.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmNFL.resx">
       <DependentUpon>frmNFL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmPlayerContract.resx">
+      <DependentUpon>frmPlayerContract.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPlayerPrinter.resx">
       <DependentUpon>frmPlayerPrinter.cs</DependentUpon>

@@ -42,17 +42,7 @@ namespace FakeMadrid.Views
             UpdateMenu();
         }
 
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lblInfor.Text = "Bạn chưa đăng nhập!";
-            SessionManager.LoggedLevel = -1;
-            UpdateMenu();
-        }
+        
         private void UpdateMenu()
         {
             bool isLogin = SessionManager.IsLoggedIn;
@@ -167,8 +157,32 @@ namespace FakeMadrid.Views
             toolStripStatusLabel1.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
 
+
+
         #region Xu Ly Event Click
 
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblInfor.Text = "Bạn chưa đăng nhập!";
+            SessionManager.LoggedLevel = -1;
+            UpdateMenu();
+        }
+        private void PlayerContractToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPlayerContract frm = new frmPlayerContract(SessionManager.LoggedUser);
+            frm.Show();
+        }
+
+        private void CoachContractToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCoachContract frm = new frmCoachContract(SessionManager.LoggedUser);
+            frm.Show();
+        }
         private void listCeoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCEO ceo = new frmCEO();
@@ -280,5 +294,6 @@ namespace FakeMadrid.Views
         }
         #endregion
 
+        
     }
 }
