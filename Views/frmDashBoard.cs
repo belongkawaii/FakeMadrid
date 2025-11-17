@@ -11,7 +11,20 @@ namespace FakeMadrid.Views
         public frmDashBoard()
         {
             InitializeComponent();
-            
+            #region Click
+
+            GNpic1_Click.Click += GNpic1_Click_Event;
+            GNpic2_Click.Click += GNpic2_Click_Event;
+            GNpic3_Click.Click += GNpic3_Click_Event;
+            GNpic4_Click.Click += GNpic4_Click_Event;
+
+            lbl1_Click.Click += GNpic1_Click_Event;
+            lbl2_Click.Click += GNpic2_Click_Event;
+            lbl3_Click.Click += GNpic3_Click_Event;
+            lbl4_Click.Click += GNpic4_Click_Event;
+
+
+            #endregion
         }
         string infor = "Bạn chưa đăng nhập!";
         public frmDashBoard(string _infor)
@@ -240,6 +253,30 @@ namespace FakeMadrid.Views
         {
             frmLichThiDau frm = new frmLichThiDau();
             frm.Show();
+        }
+
+        private void GNpic1_Click_Event(object sender, EventArgs e)
+        {
+            frmLineup frmlineup = new frmLineup();
+            frmlineup.Show();
+        }
+
+        private void GNpic2_Click_Event(object sender, EventArgs e)
+        {
+            frmArda frmadra = new frmArda();
+            frmadra.Show();
+        }
+
+        private void GNpic3_Click_Event(object sender, EventArgs e)
+        {
+            frmNFL frmnfl = new frmNFL();
+            frmnfl.Show();
+        }
+
+        private void GNpic4_Click_Event(object sender, EventArgs e)
+        {
+            frmVini frmvini = new frmVini();
+            frmvini.Show();
         }
         #endregion
 

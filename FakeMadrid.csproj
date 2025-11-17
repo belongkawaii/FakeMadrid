@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.10.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -68,9 +71,11 @@
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
     <Reference Include="System.IO.Pipelines, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.IO.Pipelines.10.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
     </Reference>
@@ -120,6 +125,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyBongDaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmArda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmArda.Designer.cs">
+      <DependentUpon>frmArda.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmCEO.cs">
       <SubType>Form</SubType>
@@ -175,6 +186,12 @@
     <Compile Include="Views\frmLichThiDau.Designer.cs">
       <DependentUpon>frmLichThiDau.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmLineup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmLineup.Designer.cs">
+      <DependentUpon>frmLineup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmListAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +216,12 @@
     <Compile Include="Views\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmNFL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmNFL.Designer.cs">
+      <DependentUpon>frmNFL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmPlayerPrinter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +239,12 @@
     </Compile>
     <Compile Include="Views\frmThongKe.Designer.cs">
       <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmVini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmVini.Designer.cs">
+      <DependentUpon>frmVini.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmXacThuc.cs">
       <SubType>Form</SubType>
@@ -235,6 +264,9 @@
     </Compile>
     <EmbeddedResource Include="ReportCoach.rdlc" />
     <EmbeddedResource Include="ReportPlayer.rdlc" />
+    <EmbeddedResource Include="Views\frmArda.resx">
+      <DependentUpon>frmArda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmCEO.resx">
       <DependentUpon>frmCEO.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +294,9 @@
     <EmbeddedResource Include="Views\frmLichThiDau.resx">
       <DependentUpon>frmLichThiDau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmLineup.resx">
+      <DependentUpon>frmLineup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmListAccount.resx">
       <DependentUpon>frmListAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +309,9 @@
     <EmbeddedResource Include="Views\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmNFL.resx">
+      <DependentUpon>frmNFL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPlayerPrinter.resx">
       <DependentUpon>frmPlayerPrinter.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmThongKe.resx">
       <DependentUpon>frmThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmVini.resx">
+      <DependentUpon>frmVini.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmXacThuc.resx">
       <DependentUpon>frmXacThuc.cs</DependentUpon>
@@ -344,6 +385,10 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\frmDashBoard\Arda.png" />
+    <None Include="Resources\frmDashBoard\Line-up.png" />
+    <None Include="Resources\frmDashBoard\NFL.png" />
+    <None Include="Resources\frmDashBoard\Vini.png" />
     <Content Include="Resources\frmLogin\ChangePass.png" />
     <Content Include="Resources\frmSignin\bannerDangKy.png" />
     <Content Include="Resources\frmSignin\Email.png" />
