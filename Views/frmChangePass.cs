@@ -41,7 +41,12 @@ namespace FakeMadrid.Views
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            if (!KiemTraPassHopLe(txtNewPass.Text))
+            {
+                MessageBox.Show("Mật khẩu phải có cả chữ và số!",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string pass = txtPass.Text;
             string newPass = txtNewPass.Text;
             DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
@@ -109,6 +114,17 @@ namespace FakeMadrid.Views
                 SeePass.Text = "👁";
                 isShowing = true;
             }
+        }
+
+        private bool KiemTraPassHopLe(string pass)
+        {
+            // Có ít nhất 1 chữ cái
+            bool coChu = pass.Any(char.IsLetter);
+
+            // Có ít nhất 1 chữ số
+            bool coSo = pass.Any(char.IsDigit);
+
+            return coChu && coSo;
         }
 
         private void frmChangePass_Load(object sender, EventArgs e)

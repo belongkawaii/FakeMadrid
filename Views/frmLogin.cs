@@ -94,7 +94,7 @@ namespace FakeMadrid.Views
                     // Lưu vào session
                     SessionManager.LoggedUser = nd.Username;
                     SessionManager.LoggedLevel = (int)nd.IDLevel;
-                    MessageBox.Show("Xin chào " + nd.Username + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                     return;

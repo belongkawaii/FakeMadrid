@@ -127,7 +127,7 @@
         <classShapeMoniker Id="084a4d4a-cec4-4c0a-97aa-176324fa8223" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 12.53125); (6.5 : 12.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 12.53125); (6.04166666666667 : 12.53125 : JumpStart); (6.20833333333333 : 12.53125 : JumpEnd); (6.5 : 12.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Player/Player_PlayerAttendance" />
       <nodes>
         <classShapeMoniker Id="5469443f-2524-4129-b5a0-25d77e6d0550" />
@@ -155,7 +155,7 @@
         <classShapeMoniker Id="410d7569-498d-46ba-a8f8-388479cb64e4" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3 : 26.3133048502604); (3.75 : 26.3133048502604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(3 : 26.3133048502604); (3.29166666666667 : 26.3133048502604 : JumpStart); (3.45833333333333 : 26.3133048502604 : JumpEnd); (3.75 : 26.3133048502604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Team/Team_Match" />
       <nodes>
         <classShapeMoniker Id="87c32851-243b-4ebb-8383-a732c385acf7" />
@@ -176,7 +176,7 @@
         <classShapeMoniker Id="637a5225-287c-4ca4-bfb9-d0cf76be8217" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.7187475 : 5.875); (4.7187475 : 4.40549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.1249975 : 5.875); (5.1249975 : 4.40549967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DataClassesQuanLyDoiBongDataContext/Coach/Coach_TrainingSession" />
       <nodes>
         <classShapeMoniker Id="0d2c6981-80c0-402e-aaaf-0be065f295a1" />
@@ -197,10 +197,10 @@
         <classShapeMoniker Id="d3218497-2847-4508-b70f-3f2ec43e367a" />
       </nodes>
     </associationConnector>
-    <classShape Id="00c8dc44-4cba-4fdf-b76a-15d7ebbb55c1" absoluteBounds="0.75, 1, 2, 2.9247054036458331">
+    <classShape Id="43b7e7a0-724a-4647-a884-8d8f33d026fc" absoluteBounds="1, 0.75, 2, 2.9247054036458331">
       <DataClassMoniker Name="/DataClassesQuanLyDoiBongDataContext/Account" />
       <nestedChildShapes>
-        <elementListCompartment Id="5ff17763-1841-4835-bcde-97f190994133" absoluteBounds="0.765, 1.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="167e3d91-bfe8-433b-b4c2-0c7ec1ba0eed" absoluteBounds="1.0150000000000001, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

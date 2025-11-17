@@ -47,7 +47,6 @@ namespace FakeMadrid.Views
             {
                 if (login.ShowDialog() == DialogResult.OK)
                 {
-                    lblInfor.Text = $"Xin chào, {SessionManager.LoggedUser}!";
                     UpdateMenu();
                 }
             }
@@ -74,7 +73,7 @@ namespace FakeMadrid.Views
                 ScheduleToolStripMenuItem.Visible = true;
                 ChangePassToolStripMenuItem.Visible = true;
                 tHỐNGKÊToolStripMenuItem.Visible = true;
-                
+                lblInfor.Text = $"Xin chào CEO, {SessionManager.LoggedUser}!";
             }
             else if (level == 1) //Coach
             {
@@ -84,7 +83,7 @@ namespace FakeMadrid.Views
                 ListCoachToolStripMenuItem.Visible = false;
                 ChangePassToolStripMenuItem.Visible = true;
                 tHỐNGKÊToolStripMenuItem.Visible = false;
-
+                lblInfor.Text = $"Xin chào Coach, {SessionManager.LoggedUser}!";
             } 
             else if (level == 2) //Player
             {
@@ -95,7 +94,7 @@ namespace FakeMadrid.Views
                 PlayerListToolStripMenuItem.Visible = false;
                 ChangePassToolStripMenuItem.Visible = true;
                 tHỐNGKÊToolStripMenuItem.Visible = false;
-
+                lblInfor.Text = $"Xin chào Player, {SessionManager.LoggedUser}!";
             } else if(level == -1)
             {
                 ManageCoachToolStripMenuItem.Visible = false;
@@ -107,6 +106,7 @@ namespace FakeMadrid.Views
                 ChangePassToolStripMenuItem.Visible = false;
                 tHỐNGKÊToolStripMenuItem.Visible = false;
             }
+            else lblInfor.Text = $"Xin chào, {SessionManager.LoggedUser}!";
         }
 
         private void listCeoToolStripMenuItem_Click(object sender, EventArgs e)

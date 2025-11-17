@@ -113,7 +113,12 @@ namespace FakeMadrid.Views
         }
         private void btnSignin_Click(object sender, EventArgs e)
         {
-
+            if (!KiemTraPassHopLe(txtPass.Text))
+            {
+                MessageBox.Show("Mật khẩu phải có cả chữ và số!",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (txtUser.Text == "" || txtPass.Text == "" || txtEmail.Text == "" || txtPassCheck.Text == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -126,22 +131,43 @@ namespace FakeMadrid.Views
                 MessageBox.Show("Mật khẩu xác nhận không khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             if (KiemTraEmail(txtEmail.Text) == false)
             {
                 MessageBox.Show("Email không hợp lệ");
                 return;
             }
 
-            string taikhoan = txtUser.Text;
+            string taikhoan = txtUser.Text.Trim();
             string email = txtEmail.Text;
             string matkhau = txtPass.Text;
             string otp = new Random().Next(1000, 9999).ToString();
+
+            DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
+
+            // === KIỂM TRA TRÙNG USERNAME ===
+            bool existUser = db.Accounts.Any(a => a.Username == taikhoan);
+            if (existUser)
+            {
+                MessageBox.Show("Username đã tồn tại! Vui lòng chọn username khác.",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // === KIỂM TRA TRÙNG EMAIL ===
+            bool existEmail = db.Accounts.Any(a => a.Email == email);
+            if (existEmail)
+            {
+                MessageBox.Show("Email đã được sử dụng! Vui lòng dùng email khác.",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             MD5 md5 = MD5.Create();
             byte[] inputBytes = Encoding.UTF8.GetBytes(matkhau + otp);
             byte[] hashBytes = md5.ComputeHash(inputBytes);
             
-            DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
+            
             Account nd = new Account
             {
 
@@ -177,6 +203,17 @@ namespace FakeMadrid.Views
         {
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(email, pattern);
+        }
+
+        private bool KiemTraPassHopLe(string pass)
+        {
+            // Có ít nhất 1 chữ cái
+            bool coChu = pass.Any(char.IsLetter);
+
+            // Có ít nhất 1 chữ số
+            bool coSo = pass.Any(char.IsDigit);
+
+            return coChu && coSo;
         }
         #endregion
 
