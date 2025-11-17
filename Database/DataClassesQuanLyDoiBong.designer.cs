@@ -33,12 +33,12 @@ namespace FakeMadrid.Database
     partial void InsertCoach(Coach instance);
     partial void UpdateCoach(Coach instance);
     partial void DeleteCoach(Coach instance);
-    partial void InsertCompetition(Competition instance);
-    partial void UpdateCompetition(Competition instance);
-    partial void DeleteCompetition(Competition instance);
     partial void InsertContract(Contract instance);
     partial void UpdateContract(Contract instance);
     partial void DeleteContract(Contract instance);
+    partial void InsertCompetition(Competition instance);
+    partial void UpdateCompetition(Competition instance);
+    partial void DeleteCompetition(Competition instance);
     partial void InsertInjury(Injury instance);
     partial void UpdateInjury(Injury instance);
     partial void DeleteInjury(Injury instance);
@@ -81,7 +81,7 @@ namespace FakeMadrid.Database
     #endregion
 		
 		public DataClassesQuanLyDoiBongDataContext() : 
-				base(global::FakeMadrid.Properties.Settings.Default.QuanLyBongDaConnectionString, mappingSource)
+				base(global::FakeMadrid.Properties.Settings.Default.QuanLyBongDaConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -118,19 +118,19 @@ namespace FakeMadrid.Database
 			}
 		}
 		
-		public System.Data.Linq.Table<Competition> Competitions
-		{
-			get
-			{
-				return this.GetTable<Competition>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Contract> Contracts
 		{
 			get
 			{
 				return this.GetTable<Contract>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Competition> Competitions
+		{
+			get
+			{
+				return this.GetTable<Competition>();
 			}
 		}
 		
@@ -573,220 +573,6 @@ namespace FakeMadrid.Database
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Competition")]
-	public partial class Competition : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _competition_id;
-		
-		private string _competition_name;
-		
-		private string _competition_type;
-		
-		private string _season;
-		
-		private string _country;
-		
-		private EntitySet<Match> _Matches;
-		
-		private EntitySet<Trophy> _Trophies;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Oncompetition_idChanging(int value);
-    partial void Oncompetition_idChanged();
-    partial void Oncompetition_nameChanging(string value);
-    partial void Oncompetition_nameChanged();
-    partial void Oncompetition_typeChanging(string value);
-    partial void Oncompetition_typeChanged();
-    partial void OnseasonChanging(string value);
-    partial void OnseasonChanged();
-    partial void OncountryChanging(string value);
-    partial void OncountryChanged();
-    #endregion
-		
-		public Competition()
-		{
-			this._Matches = new EntitySet<Match>(new Action<Match>(this.attach_Matches), new Action<Match>(this.detach_Matches));
-			this._Trophies = new EntitySet<Trophy>(new Action<Trophy>(this.attach_Trophies), new Action<Trophy>(this.detach_Trophies));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_competition_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int competition_id
-		{
-			get
-			{
-				return this._competition_id;
-			}
-			set
-			{
-				if ((this._competition_id != value))
-				{
-					this.Oncompetition_idChanging(value);
-					this.SendPropertyChanging();
-					this._competition_id = value;
-					this.SendPropertyChanged("competition_id");
-					this.Oncompetition_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_competition_name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string competition_name
-		{
-			get
-			{
-				return this._competition_name;
-			}
-			set
-			{
-				if ((this._competition_name != value))
-				{
-					this.Oncompetition_nameChanging(value);
-					this.SendPropertyChanging();
-					this._competition_name = value;
-					this.SendPropertyChanged("competition_name");
-					this.Oncompetition_nameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_competition_type", DbType="NVarChar(50)")]
-		public string competition_type
-		{
-			get
-			{
-				return this._competition_type;
-			}
-			set
-			{
-				if ((this._competition_type != value))
-				{
-					this.Oncompetition_typeChanging(value);
-					this.SendPropertyChanging();
-					this._competition_type = value;
-					this.SendPropertyChanged("competition_type");
-					this.Oncompetition_typeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_season", DbType="NVarChar(20)")]
-		public string season
-		{
-			get
-			{
-				return this._season;
-			}
-			set
-			{
-				if ((this._season != value))
-				{
-					this.OnseasonChanging(value);
-					this.SendPropertyChanging();
-					this._season = value;
-					this.SendPropertyChanged("season");
-					this.OnseasonChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_country", DbType="NVarChar(50)")]
-		public string country
-		{
-			get
-			{
-				return this._country;
-			}
-			set
-			{
-				if ((this._country != value))
-				{
-					this.OncountryChanging(value);
-					this.SendPropertyChanging();
-					this._country = value;
-					this.SendPropertyChanged("country");
-					this.OncountryChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Competition_Match", Storage="_Matches", ThisKey="competition_id", OtherKey="competition_id")]
-		public EntitySet<Match> Matches
-		{
-			get
-			{
-				return this._Matches;
-			}
-			set
-			{
-				this._Matches.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Competition_Trophy", Storage="_Trophies", ThisKey="competition_id", OtherKey="competition_id")]
-		public EntitySet<Trophy> Trophies
-		{
-			get
-			{
-				return this._Trophies;
-			}
-			set
-			{
-				this._Trophies.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Matches(Match entity)
-		{
-			this.SendPropertyChanging();
-			entity.Competition = this;
-		}
-		
-		private void detach_Matches(Match entity)
-		{
-			this.SendPropertyChanging();
-			entity.Competition = null;
-		}
-		
-		private void attach_Trophies(Trophy entity)
-		{
-			this.SendPropertyChanging();
-			entity.Competition = this;
-		}
-		
-		private void detach_Trophies(Trophy entity)
-		{
-			this.SendPropertyChanging();
-			entity.Competition = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Contract")]
 	public partial class Contract : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1144,6 +930,220 @@ namespace FakeMadrid.Database
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Competition")]
+	public partial class Competition : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _competition_id;
+		
+		private string _competition_name;
+		
+		private string _competition_type;
+		
+		private string _season;
+		
+		private string _country;
+		
+		private EntitySet<Match> _Matches;
+		
+		private EntitySet<Trophy> _Trophies;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Oncompetition_idChanging(int value);
+    partial void Oncompetition_idChanged();
+    partial void Oncompetition_nameChanging(string value);
+    partial void Oncompetition_nameChanged();
+    partial void Oncompetition_typeChanging(string value);
+    partial void Oncompetition_typeChanged();
+    partial void OnseasonChanging(string value);
+    partial void OnseasonChanged();
+    partial void OncountryChanging(string value);
+    partial void OncountryChanged();
+    #endregion
+		
+		public Competition()
+		{
+			this._Matches = new EntitySet<Match>(new Action<Match>(this.attach_Matches), new Action<Match>(this.detach_Matches));
+			this._Trophies = new EntitySet<Trophy>(new Action<Trophy>(this.attach_Trophies), new Action<Trophy>(this.detach_Trophies));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_competition_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int competition_id
+		{
+			get
+			{
+				return this._competition_id;
+			}
+			set
+			{
+				if ((this._competition_id != value))
+				{
+					this.Oncompetition_idChanging(value);
+					this.SendPropertyChanging();
+					this._competition_id = value;
+					this.SendPropertyChanged("competition_id");
+					this.Oncompetition_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_competition_name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string competition_name
+		{
+			get
+			{
+				return this._competition_name;
+			}
+			set
+			{
+				if ((this._competition_name != value))
+				{
+					this.Oncompetition_nameChanging(value);
+					this.SendPropertyChanging();
+					this._competition_name = value;
+					this.SendPropertyChanged("competition_name");
+					this.Oncompetition_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_competition_type", DbType="NVarChar(50)")]
+		public string competition_type
+		{
+			get
+			{
+				return this._competition_type;
+			}
+			set
+			{
+				if ((this._competition_type != value))
+				{
+					this.Oncompetition_typeChanging(value);
+					this.SendPropertyChanging();
+					this._competition_type = value;
+					this.SendPropertyChanged("competition_type");
+					this.Oncompetition_typeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_season", DbType="NVarChar(20)")]
+		public string season
+		{
+			get
+			{
+				return this._season;
+			}
+			set
+			{
+				if ((this._season != value))
+				{
+					this.OnseasonChanging(value);
+					this.SendPropertyChanging();
+					this._season = value;
+					this.SendPropertyChanged("season");
+					this.OnseasonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_country", DbType="NVarChar(50)")]
+		public string country
+		{
+			get
+			{
+				return this._country;
+			}
+			set
+			{
+				if ((this._country != value))
+				{
+					this.OncountryChanging(value);
+					this.SendPropertyChanging();
+					this._country = value;
+					this.SendPropertyChanged("country");
+					this.OncountryChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Competition_Match", Storage="_Matches", ThisKey="competition_id", OtherKey="competition_id")]
+		public EntitySet<Match> Matches
+		{
+			get
+			{
+				return this._Matches;
+			}
+			set
+			{
+				this._Matches.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Competition_Trophy", Storage="_Trophies", ThisKey="competition_id", OtherKey="competition_id")]
+		public EntitySet<Trophy> Trophies
+		{
+			get
+			{
+				return this._Trophies;
+			}
+			set
+			{
+				this._Trophies.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Matches(Match entity)
+		{
+			this.SendPropertyChanging();
+			entity.Competition = this;
+		}
+		
+		private void detach_Matches(Match entity)
+		{
+			this.SendPropertyChanging();
+			entity.Competition = null;
+		}
+		
+		private void attach_Trophies(Trophy entity)
+		{
+			this.SendPropertyChanging();
+			entity.Competition = this;
+		}
+		
+		private void detach_Trophies(Trophy entity)
+		{
+			this.SendPropertyChanging();
+			entity.Competition = null;
 		}
 	}
 	
@@ -5209,7 +5209,7 @@ namespace FakeMadrid.Database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarBinary(50)", UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary Password
 		{
 			get
