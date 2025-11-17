@@ -25,6 +25,10 @@ namespace FakeMadrid.Views
         {
             InitializeComponent();
 
+            this.TopMost = true;
+            this.StartPosition = FormStartPosition.Manual;
+            
+
             // Gắn sự kiện
             lblExit.MouseEnter += lblExit_MouseEnter;
             lblExit.MouseLeave += lblExit_MouseLeave;

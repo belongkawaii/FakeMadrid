@@ -15,6 +15,23 @@ namespace FakeMadrid.Views
         public frmVini()
         {
             InitializeComponent();
+            this.Deactivate += (s, e) => this.Close();
+            picTureClick.Click += picTureClick_Click;
+        }
+
+        private void frmVini_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void picTureClick_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

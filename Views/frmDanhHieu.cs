@@ -17,7 +17,6 @@ namespace FakeMadrid.Views
             InitializeComponent();
             this.TopMost = true;
             this.StartPosition = FormStartPosition.Manual;
-
             this.Deactivate += (s, e) => this.Close();
         }
 

@@ -15,6 +15,13 @@ namespace FakeMadrid.Views
         public frmArda()
         {
             InitializeComponent();
+            this.Deactivate += (s, e) => this.Close();
+            picTureClick.Click += picTureClick_Click;
+        }
+
+        private void picTureClick_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -127,7 +127,7 @@ namespace FakeMadrid.Views
         private void listCeoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCEO ceo = new frmCEO();
-            ceo.MdiParent = this;
+            
             ceo.Show();
         }
 

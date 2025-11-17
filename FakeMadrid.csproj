@@ -214,6 +214,9 @@
     </Compile>
     <EmbeddedResource Include="ReportCoach.rdlc" />
     <EmbeddedResource Include="ReportPlayer.rdlc" />
+    <EmbeddedResource Include="Views\frmArda.resx">
+      <DependentUpon>frmArda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmCEO.resx">
       <DependentUpon>frmCEO.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmThongKe.resx">
       <DependentUpon>frmThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmVini.resx">
+      <DependentUpon>frmVini.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Database\DataClassesQuanLyDoiBong.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

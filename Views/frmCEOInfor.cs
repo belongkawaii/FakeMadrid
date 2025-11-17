@@ -26,6 +26,10 @@ namespace FakeMadrid.Views
             InitializeComponent();
             CEOcurrent = selectedCEO;
 
+            this.TopMost = true;
+            this.StartPosition = FormStartPosition.Manual;
+            
+
             // Gắn sự kiện
             lblExit.MouseEnter += lblExit_MouseEnter;
             lblExit.MouseLeave += lblExit_MouseLeave;

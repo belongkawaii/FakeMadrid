@@ -89,6 +89,7 @@
             this.Controls.Add(this.imgCEO);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(470, 130);
             this.Name = "frmCEOInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCEOInfor";

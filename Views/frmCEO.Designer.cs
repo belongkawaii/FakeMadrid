@@ -47,10 +47,9 @@
             this.lblExit.BackColor = System.Drawing.Color.Transparent;
             this.lblExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExit.Location = new System.Drawing.Point(1424, 11);
-            this.lblExit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblExit.Location = new System.Drawing.Point(1068, 9);
             this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(61, 42);
+            this.lblExit.Size = new System.Drawing.Size(48, 33);
             this.lblExit.TabIndex = 3;
             this.lblExit.Text = "❌";
             this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
@@ -61,10 +60,9 @@
             // 
             this.imgTinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgTinh.Image = global::FakeMadrid.Properties.Resources.CEOTinh;
-            this.imgTinh.Location = new System.Drawing.Point(16, 229);
-            this.imgTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgTinh.Location = new System.Drawing.Point(12, 186);
             this.imgTinh.Name = "imgTinh";
-            this.imgTinh.Size = new System.Drawing.Size(233, 277);
+            this.imgTinh.Size = new System.Drawing.Size(175, 225);
             this.imgTinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgTinh.TabIndex = 4;
             this.imgTinh.TabStop = false;
@@ -74,10 +72,9 @@
             // 
             this.imgThai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgThai.Image = global::FakeMadrid.Properties.Resources.CEOThai;
-            this.imgThai.Location = new System.Drawing.Point(919, 229);
-            this.imgThai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgThai.Location = new System.Drawing.Point(689, 186);
             this.imgThai.Name = "imgThai";
-            this.imgThai.Size = new System.Drawing.Size(233, 277);
+            this.imgThai.Size = new System.Drawing.Size(175, 225);
             this.imgThai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgThai.TabIndex = 5;
             this.imgThai.TabStop = false;
@@ -87,10 +84,9 @@
             // 
             this.imgSon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgSon.Image = global::FakeMadrid.Properties.Resources.CEOSon;
-            this.imgSon.Location = new System.Drawing.Point(615, 229);
-            this.imgSon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgSon.Location = new System.Drawing.Point(461, 186);
             this.imgSon.Name = "imgSon";
-            this.imgSon.Size = new System.Drawing.Size(233, 277);
+            this.imgSon.Size = new System.Drawing.Size(175, 225);
             this.imgSon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgSon.TabIndex = 6;
             this.imgSon.TabStop = false;
@@ -100,10 +96,9 @@
             // 
             this.imgLong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgLong.Image = global::FakeMadrid.Properties.Resources.CEOLong;
-            this.imgLong.Location = new System.Drawing.Point(312, 229);
-            this.imgLong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgLong.Location = new System.Drawing.Point(234, 186);
             this.imgLong.Name = "imgLong";
-            this.imgLong.Size = new System.Drawing.Size(233, 277);
+            this.imgLong.Size = new System.Drawing.Size(175, 225);
             this.imgLong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLong.TabIndex = 7;
             this.imgLong.TabStop = false;
@@ -113,10 +108,9 @@
             // 
             this.imgBao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgBao.Image = global::FakeMadrid.Properties.Resources.CEOBao;
-            this.imgBao.Location = new System.Drawing.Point(1232, 229);
-            this.imgBao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgBao.Location = new System.Drawing.Point(924, 186);
             this.imgBao.Name = "imgBao";
-            this.imgBao.Size = new System.Drawing.Size(233, 277);
+            this.imgBao.Size = new System.Drawing.Size(175, 225);
             this.imgBao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgBao.TabIndex = 8;
             this.imgBao.TabStop = false;
@@ -124,11 +118,11 @@
             // 
             // frmCEO
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FakeMadrid.Properties.Resources.BackgoundCEO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1504, 779);
+            this.ClientSize = new System.Drawing.Size(1128, 633);
             this.Controls.Add(this.imgBao);
             this.Controls.Add(this.imgLong);
             this.Controls.Add(this.imgSon);
@@ -137,7 +131,7 @@
             this.Controls.Add(this.lblExit);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Location = new System.Drawing.Point(450, 100);
             this.Name = "frmCEO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCEO";
