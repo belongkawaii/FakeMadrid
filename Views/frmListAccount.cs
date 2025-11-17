@@ -233,5 +233,11 @@ namespace FakeMadrid.Views
         {
             loadData();
         }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            frmAccountPrinter frm = new frmAccountPrinter();
+            frm.Show();
+        }
     }
 }

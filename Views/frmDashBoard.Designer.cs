@@ -50,7 +50,6 @@
             this.ManageCoachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ListCoachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CoachContractToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -90,9 +89,9 @@
             this.panelHead.Controls.Add(this.mStripToolBox);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
-            this.panelHead.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHead.Margin = new System.Windows.Forms.Padding(4);
             this.panelHead.Name = "panelHead";
-            this.panelHead.Size = new System.Drawing.Size(1725, 73);
+            this.panelHead.Size = new System.Drawing.Size(1679, 73);
             this.panelHead.TabIndex = 0;
             // 
             // mStripToolBox
@@ -107,9 +106,8 @@
             this.CategoryToolStripMenuItem,
             this.PlayerManagementToolStripMenuItem,
             this.ManageCoachToolStripMenuItem,
-            this.ScheduleToolStripMenuItem,
             this.HelpToolStripMenuItem});
-            this.mStripToolBox.Location = new System.Drawing.Point(290, 0);
+            this.mStripToolBox.Location = new System.Drawing.Point(267, 0);
             this.mStripToolBox.Name = "mStripToolBox";
             this.mStripToolBox.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.mStripToolBox.Size = new System.Drawing.Size(963, 73);
@@ -253,13 +251,6 @@
             this.CoachContractToolStripMenuItem.Size = new System.Drawing.Size(271, 30);
             this.CoachContractToolStripMenuItem.Text = "HỢP ĐỒNG";
             // 
-            // ScheduleToolStripMenuItem
-            // 
-            this.ScheduleToolStripMenuItem.Name = "ScheduleToolStripMenuItem";
-            this.ScheduleToolStripMenuItem.Size = new System.Drawing.Size(74, 69);
-            this.ScheduleToolStripMenuItem.Text = "&LỊCH";
-            this.ScheduleToolStripMenuItem.Click += new System.EventHandler(this.ScheduleToolStripMenuItem_Click);
-            // 
             // HelpToolStripMenuItem
             // 
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
@@ -273,10 +264,10 @@
             this.sStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.lblInfor});
-            this.sStrip.Location = new System.Drawing.Point(0, 856);
+            this.sStrip.Location = new System.Drawing.Point(0, 674);
             this.sStrip.Name = "sStrip";
             this.sStrip.Padding = new System.Windows.Forms.Padding(3, 0, 19, 0);
-            this.sStrip.Size = new System.Drawing.Size(1725, 26);
+            this.sStrip.Size = new System.Drawing.Size(1679, 26);
             this.sStrip.TabIndex = 1;
             this.sStrip.Text = "statusStrip1";
             // 
@@ -360,6 +351,7 @@
             // GNpic4_Click
             // 
             this.GNpic4_Click.BorderRadius = 30;
+            this.GNpic4_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GNpic4_Click.Image = global::FakeMadrid.Properties.Resources.Vini;
             this.GNpic4_Click.ImageRotate = 0F;
             this.GNpic4_Click.Location = new System.Drawing.Point(1035, 0);
@@ -373,6 +365,7 @@
             // GNpic3_Click
             // 
             this.GNpic3_Click.BorderRadius = 30;
+            this.GNpic3_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GNpic3_Click.Image = global::FakeMadrid.Properties.Resources.NFL;
             this.GNpic3_Click.ImageRotate = 0F;
             this.GNpic3_Click.Location = new System.Drawing.Point(517, 0);
@@ -386,6 +379,7 @@
             // GNpic2_Click
             // 
             this.GNpic2_Click.BorderRadius = 30;
+            this.GNpic2_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GNpic2_Click.Image = global::FakeMadrid.Properties.Resources.Arda;
             this.GNpic2_Click.ImageRotate = 0F;
             this.GNpic2_Click.Location = new System.Drawing.Point(3, 0);
@@ -399,6 +393,7 @@
             // GNpic1_Click
             // 
             this.GNpic1_Click.BorderRadius = 30;
+            this.GNpic1_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GNpic1_Click.Image = global::FakeMadrid.Properties.Resources.Line_up;
             this.GNpic1_Click.ImageRotate = 0F;
             this.GNpic1_Click.Location = new System.Drawing.Point(0, 0);
@@ -414,7 +409,7 @@
             this.imgTrophy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgTrophy.Dock = System.Windows.Forms.DockStyle.Right;
             this.imgTrophy.Image = global::FakeMadrid.Properties.Resources._15C1_removebg_preview;
-            this.imgTrophy.Location = new System.Drawing.Point(1559, 0);
+            this.imgTrophy.Location = new System.Drawing.Point(1513, 0);
             this.imgTrophy.Margin = new System.Windows.Forms.Padding(4);
             this.imgTrophy.Name = "imgTrophy";
             this.imgTrophy.Size = new System.Drawing.Size(83, 73);
@@ -427,7 +422,7 @@
             // 
             this.imgLogo.Dock = System.Windows.Forms.DockStyle.Right;
             this.imgLogo.Image = global::FakeMadrid.Properties.Resources.Logo;
-            this.imgLogo.Location = new System.Drawing.Point(1642, 0);
+            this.imgLogo.Location = new System.Drawing.Point(1596, 0);
             this.imgLogo.Margin = new System.Windows.Forms.Padding(4);
             this.imgLogo.Name = "imgLogo";
             this.imgLogo.Size = new System.Drawing.Size(83, 73);
@@ -457,7 +452,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1725, 882);
+            this.ClientSize = new System.Drawing.Size(1679, 700);
             this.Controls.Add(this.panel2Click);
             this.Controls.Add(this.panel1Click);
             this.Controls.Add(this.sStrip);
@@ -465,7 +460,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mStripToolBox;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashBoard";
@@ -509,7 +504,6 @@
         private System.Windows.Forms.ToolStripMenuItem ManageCoachToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ListCoachToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CoachContractToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ScheduleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem;
         private System.Windows.Forms.StatusStrip sStrip;
         private System.Windows.Forms.PictureBox imgLogo;
