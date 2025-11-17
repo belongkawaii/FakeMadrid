@@ -164,9 +164,8 @@ namespace FakeMadrid.Views
         private void TitleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDanhHieu frm = new frmDanhHieu();
-            frm.MdiParent = this;
-            frm.StartPosition = FormStartPosition.CenterParent;
             frm.Show();
+
         }
 
         private void đỔIMẬTKHÂUToolStripMenuItem_Click(object sender, EventArgs e)

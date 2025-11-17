@@ -117,24 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label6.Text" xml:space="preserve">
-    <value>SPAIN
-Georgia-Spain (0-4)
-Spain-Turkey (Tuesday 18, 8:45 pm CET)
-Huijsen has been called up by Spain to try to clinch their place at the World Cup. The Real Madrid defender did not play in the victory over Georgia. The Spanish national team will face Turkey on Tuesday in their final Group E match.</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>SPAIN
-Georgia-Spain (0-4)
-Spain-Turkey (Tuesday 18, 8:45 pm CET)
-Huijsen has been called up by Spain to try to clinch their place at the World Cup. The Real Madrid defender did not play in the victory over Georgia. The Spanish national team will face Turkey on Tuesday in their final Group E match.</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>These are the Real Madrid players called up by their national teams for international fixtures in November. Bellingham (England), Huijsen (Spain), Alaba (Austria) and Arda Güler (Turkey) face 2026 World Cup qualifiers. Brahim (Morocco) and Vini Jr., Rodrygo and Militão (Brazil) will play two friendlies. Gonzalo (Spain U21) will play ENGLAND
-England-Serbia (2-0)
-Albania-England (0-2)
-Bellingham was part of both of England's victories that secured them top spot in Group K of the 2026 World Cup qualifiers. Against Serbia, our midfielder came on in the 64th minute, while against Albania, he started and played 83 minutes.two European Championship qualifiers. Mbappé and Camavinga have been released by France for the second match.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

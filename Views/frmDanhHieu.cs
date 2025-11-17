@@ -15,6 +15,10 @@ namespace FakeMadrid.Views
         public frmDanhHieu()
         {
             InitializeComponent();
+            this.TopMost = true;
+            this.StartPosition = FormStartPosition.Manual;
+
+            this.Deactivate += (s, e) => this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)

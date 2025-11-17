@@ -250,6 +250,9 @@
     <EmbeddedResource Include="Views\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmNFL.resx">
+      <DependentUpon>frmNFL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPlayerPrinter.resx">
       <DependentUpon>frmPlayerPrinter.cs</DependentUpon>
     </EmbeddedResource>
