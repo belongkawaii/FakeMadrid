@@ -389,6 +389,8 @@
     <None Include="Resources\frmDashBoard\Line-up.png" />
     <None Include="Resources\frmDashBoard\NFL.png" />
     <None Include="Resources\frmDashBoard\Vini.png" />
+    <None Include="Resources\frmLichThiDau\love4.jpg" />
+    <None Include="Resources\frmLichThiDau\love3.jpg" />
     <Content Include="Resources\frmLogin\ChangePass.png" />
     <Content Include="Resources\frmSignin\bannerDangKy.png" />
     <Content Include="Resources\frmSignin\Email.png" />

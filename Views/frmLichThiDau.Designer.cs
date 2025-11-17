@@ -34,10 +34,14 @@
             this.pnlRight = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lstMatch = new System.Windows.Forms.ListView();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.pnlLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            this.pnlRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,7 +67,7 @@
             // 
             // pnlLeft
             // 
-            this.pnlLeft.Controls.Add(this.pictureBox23);
+            this.pnlLeft.Controls.Add(this.pictureBox25);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 53);
             this.pnlLeft.Name = "pnlLeft";
@@ -72,6 +76,7 @@
             // 
             // pnlRight
             // 
+            this.pnlRight.Controls.Add(this.pictureBox26);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRight.Location = new System.Drawing.Point(1059, 53);
             this.pnlRight.Name = "pnlRight";
@@ -97,13 +102,25 @@
             this.lstMatch.UseCompatibleStateImageBehavior = false;
             this.lstMatch.DoubleClick += new System.EventHandler(this.lstMatch_DoubleClick);
             // 
-            // pictureBox23
+            // pictureBox25
             // 
-            this.pictureBox23.Location = new System.Drawing.Point(13, 66);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(136, 244);
-            this.pictureBox23.TabIndex = 0;
-            this.pictureBox23.TabStop = false;
+            this.pictureBox25.Image = global::FakeMadrid.Properties.Resources.love3;
+            this.pictureBox25.Location = new System.Drawing.Point(14, 108);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(141, 213);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox25.TabIndex = 0;
+            this.pictureBox25.TabStop = false;
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Image = global::FakeMadrid.Properties.Resources.love4;
+            this.pictureBox26.Location = new System.Drawing.Point(13, 125);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(141, 213);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox26.TabIndex = 1;
+            this.pictureBox26.TabStop = false;
             // 
             // frmLichThiDau
             // 
@@ -125,10 +142,14 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlLeft.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            this.pnlRight.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.ResumeLayout(false);
 
         }
+
+        private System.Windows.Forms.ColorDialog colorDialog1;
 
         #endregion
 
@@ -227,5 +248,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListView lstMatch;
         private System.Windows.Forms.PictureBox pictureBox23;
+        private System.Windows.Forms.PictureBox pictureBox24;
+        private System.Windows.Forms.PictureBox pictureBox25;
+        private System.Windows.Forms.PictureBox pictureBox26;
     }
 }
