@@ -36,7 +36,6 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTim = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.grbInfor = new System.Windows.Forms.GroupBox();
             this.cbbActive = new System.Windows.Forms.ComboBox();
             this.dtpNgayKichHoat = new System.Windows.Forms.DateTimePicker();
@@ -105,7 +104,6 @@
             this.grbChucNang.Controls.Add(this.btnSua);
             this.grbChucNang.Controls.Add(this.btnXoa);
             this.grbChucNang.Controls.Add(this.btnTim);
-            this.grbChucNang.Controls.Add(this.btnThem);
             this.grbChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbChucNang.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbChucNang.Location = new System.Drawing.Point(1256, 0);
@@ -144,7 +142,7 @@
             // btnSua
             // 
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSua.Location = new System.Drawing.Point(307, 42);
+            this.btnSua.Location = new System.Drawing.Point(45, 42);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(204, 60);
@@ -156,7 +154,7 @@
             // btnXoa
             // 
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.Location = new System.Drawing.Point(45, 230);
+            this.btnXoa.Location = new System.Drawing.Point(307, 42);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(204, 60);
@@ -176,18 +174,6 @@
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThem.Location = new System.Drawing.Point(45, 42);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(204, 60);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // grbInfor
             // 
@@ -597,7 +583,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnTim;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox grbInfor;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtOTP;

@@ -93,52 +93,7 @@ namespace FakeMadrid.Views
             this.Close();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            // 1. Kiểm tra ID
-            if (!int.TryParse(txtID.Text, out int id))
-            {
-                MessageBox.Show("ID phải là số!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string username = txtUsername.Text;
-            string email = txtEmail.Text;
-            string otp = txtOTP.Text;
-
-            bool active = cbbActive.SelectedItem.ToString() == "True";
-
-            int idLevel = (int)cbbLevel.SelectedValue;
-
-            DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
-
-            // kiểm tra tồn tại
-            if (db.Accounts.Any(p => p.ID == id))
-            {
-                MessageBox.Show("ID đã tồn tại!", "Thông báo");
-                return;
-            }
-
-            Account acc = new Account()
-            {
-                ID = id,
-                Username = username,
-                Email = email,
-                OTP = otp,
-                Active = active,
-                IDLevel = idLevel,
-                DateActive = dtpNgayKichHoat.Value,
-                OTPDateSend = dtpNgayTaoOTP.Value,
-                DateCreated = dtpNgayTaoTaiKhoan.Value
-            };
-
-            db.Accounts.InsertOnSubmit(acc);
-            db.SubmitChanges();
-
-            loadData();
-
-            MessageBox.Show("Thêm tài khoản thành công!", "Thông báo");
-        }
+       
 
 
         private void btnSua_Click(object sender, EventArgs e)
